@@ -20,7 +20,9 @@ public class Menu<E> {
     public void displayMenu() {
         int i = 0;
         for(E element : options) {
-            System.out.println(i+element.toString());
+            System.out.println((i+1)+element.toString());
         }
     }
+
+
 }
