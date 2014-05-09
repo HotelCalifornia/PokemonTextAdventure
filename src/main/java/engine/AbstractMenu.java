@@ -1,23 +1,25 @@
 package src.main.java.engine;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * This class sets up the basic properties of a menu
  */
-public abstract class Menu<E> {
+public abstract class AbstractMenu<E> implements KeyListener {
 
     //stores the options available in this menu
     private List<E> options;
     //returns the list of options
     public List<E> getOptions() { return options; }
 
-    public Menu() {
+    public AbstractMenu() {
         options = new ArrayList<E>();
     }
 
-    public Menu(List<E> list) {
+    public AbstractMenu(List<E> list) {
         options = list;
     }
 

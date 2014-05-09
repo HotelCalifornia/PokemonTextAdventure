@@ -1,16 +1,22 @@
 package src.main.java;
 
-import src.main.java.engine.Menu;
+import src.main.java.engine.AbstractMenu;
+import src.main.java.engine.ExampleMenu;
 
 import java.util.ArrayList;
 
-public class Main {
+public class Main implements Runnable {
 	public static void main(String[] args) {
         ArrayList<String> test = new ArrayList<String>();
         test.add("Option");
         test.add("Option");
         test.add("Option");
-        Menu<String> example = new Menu<String>(test);
+        ExampleMenu<String> example = new ExampleMenu<String>(test);
         example.displayMenu();
 	}
+
+    @Override
+    public void run() {
+
+    }
 }
