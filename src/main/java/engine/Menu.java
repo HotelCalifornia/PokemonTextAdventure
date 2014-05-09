@@ -10,6 +10,7 @@ public class Menu<E> {
 
     //stores the options available in this menu
     private List<E> options;
+    //returns the list of options
     public List<E> getOptions() { return options; }
 
     public Menu() {
