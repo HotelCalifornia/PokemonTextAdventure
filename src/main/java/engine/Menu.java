@@ -17,6 +17,7 @@ public class Menu<E> {
     }
 
     //display the contents of the menu
+    //for this project, we must make sure to override the toString() method where applicable
     public void displayMenu() {
         int i = 0;
         for(E element : options) {
