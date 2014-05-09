@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * This class sets up the basic properties of a menu
  */
-public class Menu<E> {
+public abstract class Menu<E> {
 
     //stores the options available in this menu
     private List<E> options;
@@ -30,6 +30,8 @@ public class Menu<E> {
             i++;
         }
     }
+    
+    public abstract void selectOption(KeyEvent e);
 
 
 }
