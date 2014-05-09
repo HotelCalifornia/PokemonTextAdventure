@@ -1,7 +1,7 @@
-package src.main.java.engine;
+package src.main.java.engine.creatures;
 
 /**
- * Created by 618616 on 5/9/2014.
+ * contains the possible types of creatures
  */
 public enum EnumTypes {
     FIRE(false, false, false, false, false, false, false),
@@ -10,6 +10,10 @@ public enum EnumTypes {
     GRASS(false, false, false, false, false, false, false),
     FLYING(false, false, false, false, false, false, false),
     PSYCHIC(false, false, false, false, false, false, false),
-    GHOST(false, false, false, false, false, false, false),
+    GHOST(false, false, false, false, false, false, false);
+
+    EnumTypes(boolean fire, boolean water, boolean elec, boolean grass, boolean flying, boolean psychic, boolean ghost) {
+
+    }
 
 }
