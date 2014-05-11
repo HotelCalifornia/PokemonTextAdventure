@@ -30,10 +30,13 @@ public abstract class AbstractCreature {
     /* stats */
     //stores the HP stat of this creature
     protected int HPStat;
+    public int getHPStat() { return HPStat; }
     //stores the ATK stat of this creature
     protected int ATKStat;
+    public int getATKStat() { return ATKStat; }
     //stores the DEF stat of this creature
     protected int DEFStat;
+    public int getDEFStat() { return DEFStat; }
 
     /**
      * calculate the creature's level from its experience
