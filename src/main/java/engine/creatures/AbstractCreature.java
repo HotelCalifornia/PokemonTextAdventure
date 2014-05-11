@@ -28,9 +28,11 @@ public abstract class AbstractCreature {
     public int getHP() { return HP; }
 
     /* stats */
+    //stores the HP stat of this creature
     protected int HPStat;
-
+    //stores the ATK stat of this creature
     protected int ATKStat;
+    //stores the DEF stat of this creature
     protected int DEFStat;
 
     /**
