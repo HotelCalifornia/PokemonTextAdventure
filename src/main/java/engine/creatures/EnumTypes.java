@@ -6,23 +6,23 @@ package src.main.java.engine.creatures;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 //TODO determine if we want to keep type-effectiveness a boolean value
 public enum EnumTypes {
-    FIRE(false, false, false, false, false, false, false),
-    WATER(false, false, false, false, false, false, false),
-    ELEC(false, false, false, false, false, false, false),
-    GRASS(false, false, false, false, false, false, false),
-    FLYING(false, false, false, false, false, false, false),
-    PSYCHIC(false, false, false, false, false, false, false),
-    GHOST(false, false, false, false, false, false, false);
+    FIRE(0, 0, 0, 0, 0, 0, 0),
+    WATER(0, 0, 0, 0, 0, 0, 0),
+    ELEC(0, 0, 0, 0, 0, 0, 0),
+    GRASS(0, 0, 0, 0, 0, 0, 0),
+    FLYING(0, 0, 0, 0, 0, 0, 0),
+    PSYCHIC(0, 0, 0, 0, 0, 0, 0),
+    GHOST(0, 0, 0, 0, 0, 0, 0);
 
-    boolean fire;
-    boolean water;
-    boolean elec;
-    boolean grass;
-    boolean flying;
-    boolean psychic;
-    boolean ghost;
+    int fire;
+    int water;
+    int elec;
+    int grass;
+    int flying;
+    int psychic;
+    int ghost;
 
-    EnumTypes(boolean fire, boolean water, boolean elec, boolean grass, boolean flying, boolean psychic, boolean ghost) {
+    EnumTypes(int fire, int water, int elec, int grass, int flying, int psychic, int ghost) {
 
     }
     static int isEffective(EnumTypes type1, EnumTypes type2) {
