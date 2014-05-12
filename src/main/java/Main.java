@@ -5,7 +5,7 @@ import src.main.java.engine.ExampleMenu;
 import java.util.ArrayList;
 
 /**
- * story base: you have long-term memory loss, so you can't remember your way
+ * Story base: you have long-term memory loss, so you can't remember your way
  * home after you leave. As such, you can never go back to a town that is more than
  * 1 route-length away. Example:
  *
