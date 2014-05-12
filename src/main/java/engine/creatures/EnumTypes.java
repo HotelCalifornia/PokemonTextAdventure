@@ -34,13 +34,21 @@ public enum EnumTypes {
          * so, this method should make the appropriate comparisons as such
          * if(type1.fire == 1 && type2 == FIRE) { return 1; }
          */
-        if     (type1.fire    && type2  ==    FIRE) { return 1; }
-        else if(type1.water   && type2  ==   WATER) { return 1; }
-        else if(type1.elec    && type2  ==    ELEC) { return 1; }
-        else if(type1.grass   && type2  ==   GRASS) { return 1; }
-        else if(type1.flying  && type2  ==  FLYING) { return 1; }
-        else if(type1.psychic && type2  == PSYCHIC) { return 1; }
-        else if(type1.ghost   && type2  ==   GHOST) { return 1; }
+        if     (type1.fire==1    && type2  ==    FIRE) { return 1; }
+        else if(type1.water==1   && type2  ==   WATER) { return 1; }
+        else if(type1.elec==1    && type2  ==    ELEC) { return 1; }
+        else if(type1.grass==1   && type2  ==   GRASS) { return 1; }
+        else if(type1.flying==1  && type2  ==  FLYING) { return 1; }
+        else if(type1.psychic==1 && type2  == PSYCHIC) { return 1; }
+        else if(type1.ghost==1   && type2  ==   GHOST) { return 1; }
+        else if(type1.fire==-1 && type2 == FIRE) {return -1;}
+        else if(type1.water==-1   && type2  ==   WATER) { return -1; }
+        else if(type1.elec==-1    && type2  ==    ELEC) { return -1; }
+        else if(type1.grass==-1   && type2  ==   GRASS) { return -1; }
+        else if(type1.flying==-1  && type2  ==  FLYING) { return -1; }
+        else if(type1.psychic==-1 && type2  == PSYCHIC) { return -1; }
+        else if(type1.ghost==-1   && type2  ==   GHOST) { return -1; }
+
         else                                        { return 0; }
     }
 
