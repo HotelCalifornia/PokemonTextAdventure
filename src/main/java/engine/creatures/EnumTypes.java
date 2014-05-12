@@ -26,13 +26,13 @@ public enum EnumTypes {
 
     }
     static int isEffective(EnumTypes type1, EnumTypes type2) {
-        if     (type1.fire    && type2  ==    FIRE) { return 1; }
-        else if(type1.water   && type2  ==   WATER) { return 1; }
-        else if(type1.elec    && type2  ==    ELEC) { return 1; }
-        else if(type1.grass   && type2  ==   GRASS) { return 1; }
-        else if(type1.flying  && type2  ==  FLYING) { return 1; }
-        else if(type1.psychic && type2  == PSYCHIC) { return 1; }
-        else if(type1.ghost   && type2  ==   GHOST) { return 1; }
+        if     (type1.fire    && type2  ==    FIRE) { return 0; }
+        else if(type1.water   && type2  ==   WATER) { return 0; }
+        else if(type1.elec    && type2  ==    ELEC) { return 0; }
+        else if(type1.grass   && type2  ==   GRASS) { return 0; }
+        else if(type1.flying  && type2  ==  FLYING) { return 0; }
+        else if(type1.psychic && type2  == PSYCHIC) { return 0; }
+        else if(type1.ghost   && type2  ==   GHOST) { return 0; }
         else                                        { return 0; }
     }
 
