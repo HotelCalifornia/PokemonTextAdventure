@@ -13,7 +13,7 @@ Mechanics
 
 _Type chart_  
  Attacking Type | Fire | Electric | Grass | Flying | Psychic | Ghost | Water   
-:-------------- | :--: | :------: | :---: | :----: | :-----: | :---: | :---:  
+ -------------- | :--: | :------: | :---: | :----: | :-----: | :---: | :---:  
  Fire           | 1/2  | 1        | 2     | 1      | 1       | 1     | 1/2     
  Electric       | 1    | 1/2      | 1/2   | 2      | 1       | 1     | 2       
  Grass          | 1/2  | 2        | 1/2   | 1/2    | 1       | 1     | 2       
