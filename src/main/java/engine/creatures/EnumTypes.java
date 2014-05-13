@@ -72,18 +72,18 @@ public enum EnumTypes {
         grassStats.pit("HP", 50);
         grassStats.pit("ATK", 30);
         grassStats.put("DEF", 40);
-        elecStats.pit("HP", 20);
-        elecStats.pit("ATK", 60);
-        elecStats.pit("DEF", 40);
-        flyingStats.pit("HP", 20);
-        flyingStats.pit("ATK", 30);
-        flyingStats.pit("DEF", 60);
-        psychicStats.pit("HP", 10);
-        psychicStats.pit("ATK", 70);
-        psychicStats.pit("DEF", 20);
-        ghostStats.pit("HP", 20);
-        ghostStats.pit("ATK", 10);
-        ghostStats.pit("DEF", 70);
+        elecStats.put("HP", 20);
+        elecStats.put("ATK", 60);
+        elecStats.put("DEF", 40);
+        flyingStats.put("HP", 20);
+        flyingStats.put("ATK", 30);
+        flyingStats.put("DEF", 60);
+        psychicStats.put("HP", 10);
+        psychicStats.put("ATK", 70);
+        psychicStats.put("DEF", 20);
+        ghostStats.put("HP", 20);
+        ghostStats.put("ATK", 10);
+        ghostStats.put("DEF", 70);
     }
 
     //precondition: @param stat will be one of either "HP", "ATK", or "DEF"
