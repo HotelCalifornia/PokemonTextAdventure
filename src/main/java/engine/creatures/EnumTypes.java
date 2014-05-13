@@ -63,9 +63,27 @@ public enum EnumTypes {
 
     private void initMaps() {
         //this is how you associate the stat with its value
-        fireStats.put("HP",/*insert int value here*/);
-        fireStats.put("ATK",/*insert int value here*/);
-        fireStats.put("DEF",/*insert int value here*/);
+        fireStats.put("HP", 30);
+        fireStats.put("ATK", 50);
+        fireStats.put("DEF", 40);
+        waterStats.put("HP", 30);
+        waterStats.put("ATK", 40);
+        waterStats.put("DEF", 50);
+        grassStats.pit("HP", 50);
+        grassStats.pit("ATK", 30);
+        grassStats.put("DEF", 40);
+        elecStats.pit("HP", 20);
+        elecStats.pit("ATK", 60);
+        elecStats.pit("DEF", 40);
+        flyingStats.pit("HP", 20);
+        flyingStats.pit("ATK", 30);
+        flyingStats.pit("DEF", 60);
+        psychicStats.pit("HP", 10);
+        psychicStats.pit("ATK", 70);
+        psychicStats.pit("DEF", 20);
+        ghostStats.pit("HP", 20);
+        ghostStats.pit("ATK", 10);
+        ghostStats.pit("DEF", 70);
     }
 
     //precondition: @param stat will be one of either "HP", "ATK", or "DEF"
@@ -73,6 +91,24 @@ public enum EnumTypes {
         //check for the type, return the appropriate stat from the stat Map
         if(type == FIRE) {
             return fireStats.get(stat);
+        }
+        if(type == WATER){
+            return waterStats.get(stat);
+        }
+        if(type == GRASS){
+            return grassStats.get(stat);
+        }
+        if(type == ELEC){
+            return elecStats.get(stat);
+        }
+        if(type == FLYING){
+            return flyingStats.get(stat);
+        }
+        if(type == PSYCHIC){
+            return psychicStats.get(stat);
+        }
+        if(type == GHOST){
+            return ghostStats.get(stat);
         }
         return 0;
     }
