@@ -69,8 +69,8 @@ public enum EnumTypes {
         waterStats.put("HP", 30);
         waterStats.put("ATK", 40);
         waterStats.put("DEF", 50);
-        grassStats.pit("HP", 50);
-        grassStats.pit("ATK", 30);
+        grassStats.put("HP", 50);
+        grassStats.put("ATK", 30);
         grassStats.put("DEF", 40);
         elecStats.put("HP", 20);
         elecStats.put("ATK", 60);
