@@ -1,4 +1,4 @@
-package src.main.java.engine;
+package src.java.main.engine;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

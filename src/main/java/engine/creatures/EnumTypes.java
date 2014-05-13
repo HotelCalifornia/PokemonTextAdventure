@@ -1,5 +1,8 @@
 package src.main.java.engine.creatures;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * contains the possible types of creatures
  */
@@ -13,7 +16,13 @@ public enum EnumTypes {
     FLYING(0, 0, 0, 0, 0, 0, 0),
     PSYCHIC(0, 0, 0, 0, 0, 0, 0),
     GHOST(0, 0, 0, 0, 0, 0, 0);
-
+    Map<String, Integer> fireStats = new HashMap<String, Integer>();
+    Map<String, Integer> waterStats = new HashMap<String, Integer>();
+    Map<String, Integer> elecStats = new HashMap<String, Integer>();
+    Map<String, Integer> grassStats = new HashMap<String, Integer>();
+    Map<String, Integer> flyingStats = new HashMap<String, Integer>();
+    Map<String, Integer> psychicStats = new HashMap<String, Integer>();
+    Map<String, Integer> ghostStats = new HashMap<String, Integer>();
     int fire;
     int water;
     int elec;
@@ -34,14 +43,14 @@ public enum EnumTypes {
          * so, this method should make the appropriate comparisons as such
          * if(type1.fire == 1 && type2 == FIRE) { return 1; }
          */
-        if     (type1.fire==1    && type2  ==    FIRE) { return 1; }
-        else if(type1.water==1   && type2  ==   WATER) { return 1; }
-        else if(type1.elec==1    && type2  ==    ELEC) { return 1; }
-        else if(type1.grass==1   && type2  ==   GRASS) { return 1; }
-        else if(type1.flying==1  && type2  ==  FLYING) { return 1; }
-        else if(type1.psychic==1 && type2  == PSYCHIC) { return 1; }
-        else if(type1.ghost==1   && type2  ==   GHOST) { return 1; }
-        else if(type1.fire==-1 && type2 == FIRE) {return -1;}
+        if     (type1.fire==1     && type2  ==    FIRE) { return 1;  }
+        else if(type1.water==1    && type2  ==   WATER) { return 1;  }
+        else if(type1.elec==1     && type2  ==    ELEC) { return 1;  }
+        else if(type1.grass==1    && type2  ==   GRASS) { return 1;  }
+        else if(type1.flying==1   && type2  ==  FLYING) { return 1;  }
+        else if(type1.psychic==1  && type2  == PSYCHIC) { return 1;  }
+        else if(type1.ghost==1    && type2  ==   GHOST) { return 1;  }
+        else if(type1.fire==-1    && type2  ==    FIRE) { return -1; }
         else if(type1.water==-1   && type2  ==   WATER) { return -1; }
         else if(type1.elec==-1    && type2  ==    ELEC) { return -1; }
         else if(type1.grass==-1   && type2  ==   GRASS) { return -1; }
@@ -49,7 +58,23 @@ public enum EnumTypes {
         else if(type1.psychic==-1 && type2  == PSYCHIC) { return -1; }
         else if(type1.ghost==-1   && type2  ==   GHOST) { return -1; }
 
-        else                                        { return 0; }
+        else                                            { return 0;  }
+    }
+
+    private void initMaps() {
+        //this is how you associate the stat with its value
+        fireStats.put("HP",/*insert int value here*/);
+        fireStats.put("ATK",/*insert int value here*/);
+        fireStats.put("DEF",/*insert int value here*/);
+    }
+
+    //precondition: @param stat will be one of either "HP", "ATK", or "DEF"
+    public int getStatForType(EnumTypes type, String stat) {
+        //check for the type, return the appropriate stat from the stat Map
+        if(type == FIRE) {
+            return fireStats.get(stat);
+        }
+        return 0;
     }
 
 }
