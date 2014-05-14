@@ -24,7 +24,10 @@ _Type chart_
  _Ghost_          | 1    | 1        | 1     | 1      | 2       | 1/2   | 1       
  _Water_          | 2    | 1/2      | 1/2   | 1      | 1       | 1     | 1/2     
 
-
+Key
+- _italics_: attacking type
+- __bold__: defending type
+- number: damage multiplier
 
 Legal
 =====
