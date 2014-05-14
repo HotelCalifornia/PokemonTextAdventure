@@ -42,13 +42,21 @@ In addition to a type, each creature has a set of stats: Attack (ATK), Defense (
   _ATK_ | 50 | 40 | 30 | 30 | 60 | 70 | 10  
   _DEF_ | 40 | 50 | 40 | 60 | 40 | 20 | 70  
   
+###Experience  
+When a creature is in-battle (see below), and it defeats the opposing creature, it gains a certain amount of experience. As a creature's experience increases, it 'levels-up.'  
+  
+###Levels  
+Each creature has a 'level.' The level of a creature is determined by the amount of experience it has. As a creature's level increases, its stats increase as well, and there is a chance that the creature could learn a new, more powerful move (see below).  
+  
+
 ###Key
 - _italics_: attacking type
 - __bold__: defending type
 - number: damage multiplier  
-  
+
 #In-game
 The player has long-term memory loss! This means you cannot remember the places you've been. As a result, going more than one route-length away from a town means you've 'forgotten' it, and can no longer go back.  
+  
 ###Routes
 A route is a stretch of road between towns. Each route has a chance to be between one and three 'route-lengths,' or segments, long.  
   
@@ -64,11 +72,28 @@ T ~ X ~ T => the player has gone another route-length away from the first town. 
 After the fourth scene in the scenario, the player has traversed two route-lengths away from the town, so the only way is forward.  
   
 ###Battling
-On every route, there is a random chance for creatures to spawn. Each creature has one of seven types (see above), each of which entails a set of base stats (see above). As the player progresses through the game, the overall 'tier' of newly spawned creatures increases. This is a form of linear progression: as the player progresses, the enemies get stronger.  
+On every route, there is a random chance for creatures to spawn. As the player progresses through the game, the overall 'tier' of newly spawned creatures increases (as do their levels, and stats). This is a form of linear progression: as the player progresses, the enemies get stronger.  
 The other thing that are spawned on routes are 'trainers,' or computer-controlled players. The same rules apply to the creatures that spawn, in that they get stronger as the player progresses. 
-When the player's creatures battle with other creatures, the player's creatures gain experience when the opposing creatures are 'knocked-out,' or lose all of their HP. As creatures gain experience, they level up, which provide stat-increases and a chance to learn newer, more powerful moves, so as to keep up with the progression of the game.  
-Another option the player has when battling 'wild,' or not trainer-owned, creatures, is to catch them. This means that the wild creature becomes the player's, and the player can use it in battle.
+When the player's creatures battle with other creatures, the player's creatures gain experience when the opposing creatures are 'knocked-out,' or lose all of their HP.   
+Another option the player has when battling 'wild,' or not trainer-owned, creatures, is to catch them. This means that the wild creature becomes the player's, and the player can then use it in battle.  
+  
+###Party
+No, not that kind of party (aww). As the player catches creatures throughout their adventure, they get to keep a maximum of six with them at any time. These are the 'party,' or the creatures you may use in battle. However, this doesn't mean the player can't have any more. In fact, there is a system in place that allows for the storage of up to sixty-four more creatures in a 'boxes' network within the world. This can be accessed from the Pokécenters in each town.
+  
+###Towns  
+In the world, there are towns. Each town has a few facilities:
+1. Pokécenter: Here is where the player can heal their creatures and access the 'boxes' network discussed above.
+2. Pokémart: Here is where you can buy certain items, including pokéballs (used to capture new creatures) and health items (used in-battle to heal your creatures' HP and status problems)
+3. Gym: This has a random chance to spawn in a town. Here is where you can win a 'gym badge' (see below) by defeating the Gym Leader. Each gym has a type specialty. To make up for this, they tout creatures that a stronger than the player's.
+4. TM House: This has a random chance to spawn in a town. Here is where you can buy special moves that you can teach to your creatures.  
 
+  
+###Gyms and Gym Badges— Ticket to the Championship  
+After defeating a gym, the player earns a gym badge. These are your ticket to the Pokémon League championship, the final challenge of the game. Once the player has eight gym badges, they are given the option to challenge the Elite Four, four trainers that make up the championship. These trainers are stronger even than Gym Leaders. By defeating all four concurrently, the player successfully 'beats' the game. If the player does not succeed, i.e. all of their creatures are defeated, the player is sent back to the last town they were in, to try again. The player can not try again immediately, however, they must earn another eight badges in order to get another chance at the Championship.  
+  
+###Have Fun!
+That's pretty much all you need to know about the mechanics of this game.  
+We hope you enjoy it!  
 
 Legal
 =====
