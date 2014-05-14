@@ -1,5 +1,5 @@
-PokemonTextAdventure
-====================
+Pokemon Text Adventure
+======================
 
 AP Computer Science A final project (2014)  
   
