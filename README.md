@@ -1,4 +1,3 @@
-<head><link rel="stylesheet" type="text/css" href="test.css"></head>
 PokemonTextAdventure
 ====================
 
@@ -17,7 +16,7 @@ _Type chart_
  
  | Fire | Water | Grass | Flying | Electric | Psychic | Ghost  
  -------------- | :---------------: | :---------------: | :---------------: | :---------------: | :---------------: | :----------------: | :---------------:  
- _Fire_ | <p class="nve">1/2</p> | 1/2 | 2 | 1 | 1 | 1 | 1  
+ _Fire_ | 1/2 | 1/2 | 2 | 1 | 1 | 1 | 1  
  _Water_ | 2 | 1/2 | 1/2 | 1 | 1/2 | 1 | 1  
  _Grass_ | 1/2 | 2 | 1/2 | 1/2 | 2 | 1 | 1  
  _Flying_ | 1 | 1 | 2 | 1/2 | 1/2 | 1 | 1 
