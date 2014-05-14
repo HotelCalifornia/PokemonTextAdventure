@@ -11,7 +11,7 @@ and _Daniel LeBien_
 Mechanics
 =========
 
-#Core Gameplay  
+##Core Gameplay  
 This section describes how the game works.
   
 ###Creatures  
@@ -52,9 +52,17 @@ Each creature has a 'level.' The level of a creature is determined by the amount
 ###Key
 - _italics_: attacking type
 - __bold__: defending type
-- number: damage multiplier  
+- number: damage multiplier 
 
-#In-game
+###Help commands
+- /help: brings up help command list
+- /creatures: brings up a list of pokemon in party with names, moves, and stats
+- /"playername": brings up how many badges the player has and how much money they have
+- /save: saves where the player is in the game and asks the player if they want to quit or continue
+- /exit: quits without saving. Ask the player if they are sure
+
+
+##In-game
 The player has long-term memory loss! This means you cannot remember the places you've been. As a result, going more than one route-length away from a town means you've 'forgotten' it, and can no longer go back.  
   
 ###Routes
