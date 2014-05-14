@@ -11,14 +11,14 @@ and _Daniel LeBien_
 Mechanics
 =========
 
-##Core Gameplay  
+#Core Gameplay  
 This section describes how the game works.
   
 ###Creatures  
-This game is based around the existence of 'Pokémon' (hereafter 'creatures,' for legal reasons). These creatures cn be controlled by the player and told to fight other creatures encountered by the player.  
+This game is based around the existence of 'Pokémon' (hereafter 'creatures,' for legal reasons). These creatures can be controlled by the player and told to fight other creatures encountered by the player.  
   
 ###Types  
-Each creature has a 'type.' There are seven types in total:  
+Each creature has a 'type,' which dictates strengths and weaknesses. There are seven types in total:  
 Fire, Water, Grass, Flying, Electric, Psychic, and Ghost. Each type has a set of strengths and weaknesses against the other types. These strengths and weaknesses are displayed in a chart below.  
   
 ###Type chart    
@@ -43,7 +43,7 @@ In addition to a type, each creature has a set of stats: Attack (ATK), Defense (
   _DEF_ | 40 | 50 | 40 | 60 | 40 | 20 | 70  
   
 ###Experience  
-When a creature is in-battle (see below), and it defeats the opposing creature, it gains a certain amount of experience. As a creature's experience increases, it 'levels-up.'  
+When a creature is in battle (see below), and it defeats the opposing creature, it gains a certain amount of experience. As a creature's experience increases, it 'levels-up.'  
   
 ###Levels  
 Each creature has a 'level.' The level of a creature is determined by the amount of experience it has. As a creature's level increases, its stats increase as well, and there is a chance that the creature could learn a new, more powerful move (see below).  
@@ -52,17 +52,9 @@ Each creature has a 'level.' The level of a creature is determined by the amount
 ###Key
 - _italics_: attacking type
 - __bold__: defending type
-- number: damage multiplier 
+- number: damage multiplier  
 
-###Help commands
-- /help: brings up help command list
-- /creatures: brings up a list of pokemon in party with names, moves, and stats
-- /"playername": brings up how many badges the player has and how much money they have
-- /save: saves where the player is in the game and asks the player if they want to quit or continue
-- /exit: quits without saving. Ask the player if they are sure
-
-
-##In-game
+#In-game
 The player has long-term memory loss! This means you cannot remember the places you've been. As a result, going more than one route-length away from a town means you've 'forgotten' it, and can no longer go back.  
   
 ###Routes
