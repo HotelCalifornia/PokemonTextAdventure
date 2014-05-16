@@ -23,7 +23,7 @@ public class Main implements Runnable {
         test.add("Option");
         test.add("Option");
         ExampleMenu<String> example = new ExampleMenu<String>(test);
-        example.displayMenu();
+        //example.displayMenu();
 	}
 
     @Override

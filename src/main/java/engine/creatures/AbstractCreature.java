@@ -1,6 +1,8 @@
 package src.main.java.engine.creatures;
 
 
+import java.util.ArrayList;
+
 /**
  * the superclass for all types of creatures
  * possible types of creatures:
@@ -14,6 +16,10 @@ public abstract class AbstractCreature {
     //the creature's type
     protected EnumTypes type;
     public EnumTypes getType() { return type; }
+
+    //the creature's moves
+    protected ArrayList<Moves> moves;
+    public ArrayList<Moves> getMoves() { return moves; }
 
     //stores the tier of this creature
     protected int tier;
