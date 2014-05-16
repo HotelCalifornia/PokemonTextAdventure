@@ -6,7 +6,6 @@ public static void main(String[] args)
 {
   //defines variables
   int routeNum = 0;
-  int playerSteps = 0;
   boolean pokemonAppear = false;
   int routeLength = 0;
   Scanner move = new Scanner(System.in);
