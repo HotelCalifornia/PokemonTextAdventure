@@ -2,19 +2,25 @@
 import java.util.*;
 package src.main.java.engine;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
-public static void main(String[] args)
-{
-  //defines variables
-  int routeNum = 0;
-  boolean pokemonAppear = false;
-  int routeLength = 0;
-  Scanner move = new Scanner(System.in);
-  char direction = null;
-  int i = 1;
-  
-}
 public class RouteGenerator
 {
+  private int routeNum;
+  private boolean pokemonAppear;
+  private int routeLength;
+  private char direction;
+  private int i;
+  public RouteGenerator()
+  {
+      //defines variables
+      routeNum = 0;
+      pokemonAppear = false;
+      routeLength = 0;
+      Scanner move = new Scanner(System.in);
+      direction = null;
+      i = 1;
+  
+  }
+  public generate() {
     //determines the route length between 5 and 15
     routeLength= 5 + (int)(Math.random()*10);
     //gives info about route to player upon entering route
@@ -55,4 +61,5 @@ public class RouteGenerator
         //need town generation to complete
       }
     }
+  }
 }
