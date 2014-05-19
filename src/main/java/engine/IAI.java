@@ -17,6 +17,18 @@ public interface IAI {
      * @return the best move to use
      */
     Moves bestMove(EnumTypes thisType, EnumTypes otherType);
-
-
+    
+    /**
+     * uses the move selected by bestMove(), i.e.
+     * apply damage and effects to the opponent
+     * @param other the other creature in battle
+     * @param the move that will be used
+     */
+    void useMove(AbstractCreature other, Move move);
+    
+    /**
+     * determines what happens when the creature retreats runs away or is switched out by a trainer),
+     * for instance, if the creature is wild, the battle is over
+     */
+    void retreat();
 }
