@@ -11,7 +11,7 @@ and _Daniel LeBien_
 Mechanics
 =========
 
-#Core Gameplay  
+##Core Gameplay  
 This section describes how the game works.
   
 ###Creatures  
@@ -33,6 +33,11 @@ Fire, Water, Grass, Flying, Electric, Psychic, and Ghost. Each type has a set of
  _Psychic_ | 1 | 1 | 1 | 1 | 1 | 1/2 | 2  
  _Ghost_ | 1 | 1 | 1 | 1 | 1 | 2 | 1/2
   
+###Key
+- _italics_: attacking type
+- __bold__: defending type
+- number: damage multiplier  
+
 ###Stats  
 In addition to a type, each creature has a set of stats: Attack (ATK), Defense (DEF), and Hit-Points (HP). For each type, there are a set of 'base stats.' These are the very lowest a creature's stats can be. The base stats for each type are as follows.  
   
@@ -48,13 +53,7 @@ When a creature is in battle (see below), and it defeats the opposing creature, 
 ###Levels  
 Each creature has a 'level.' The level of a creature is determined by the amount of experience it has. As a creature's level increases, its stats increase as well, and there is a chance that the creature could learn a new, more powerful move (see below).  
   
-
-###Key
-- _italics_: attacking type
-- __bold__: defending type
-- number: damage multiplier  
-
-#In-game
+##In-game
 The player has long-term memory loss! This means you cannot remember the places you've been. As a result, going more than one route-length away from a town means you've 'forgotten' it, and can no longer go back.  
   
 ###Routes
