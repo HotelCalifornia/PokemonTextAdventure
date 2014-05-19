@@ -9,19 +9,13 @@ Avus
 Aether
 Nuero
 Ecto
-Corporeal 
 Hiro
 Hachi
 Tri
 Sun
 Leo
-Ethereal 
 Regi
-Necro 
-Jovial 
-Vexed 
-Irked 
-In
+Necro
 Xeo
 Umbra
 Poke
@@ -43,3 +37,130 @@ Blitz
 Nax
 Aero
 Psy
+Hawk
+Den
+Mon
+Razor
+Lazor
+Drake
+
+Town Names:
+Prefixes:
+Pallet
+Mikado
+Cobalt
+Denim
+Goldenrod
+Firebrick
+Peach
+Turqoise
+Burlywood
+Sienna
+Azure
+Ivory
+Cornflower
+Starch
+
+Suffixes:
+ Town
+ City
+ Village
+burg
+ Municipality
+ Autonomous Collective
+ Whistle-top
+ Hamlet
+ 
+Moves:
+Prefixes:
+Fire:
+Cinder
+Nova
+Fire
+Blaze
+Corona
+Pyro
+Kasai
+
+Water:
+Aqua
+Ocean
+Hydro
+Sea
+Mizu
+Splash
+Swamp
+
+Grass:
+Gaia
+Leaf
+Vine
+Solar
+Earth
+Ground
+Grass
+Seed
+
+Electric:
+Thunder
+Raiu
+Electric
+Volt
+Bolt
+Lightning
+Quick
+Raiden
+
+Flying:
+Wind
+Beak
+Peck
+Quill
+Breeze
+Gale
+Tectrix
+
+Psychic:
+Cranial
+Nuero
+Psy
+Psionic
+Mental
+Confusion
+Insanity
+
+Ghost:
+Spectre
+Spooky
+Shadow
+Night
+Ether
+Final
+Death
+
+Suffixes:
+ Beam
+ Slash
+ Slap
+ Strike
+ Burn
+ Scald
+ EXXXXXPLOSSIIIOOOONNNN!!!!
+ Kick
+ Ungentlemanly Response
+ Shock
+ Blast
+ Cut
+ Scratch
+ Edge
+ Pulse
+ Wave
+ Discharge
+ Boom
+ Punch
+ Fist
+ Freeze
+ Squall
+ Blare
+ Wail
+ Curse
