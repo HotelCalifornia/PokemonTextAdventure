@@ -7,7 +7,8 @@ public class TownGenerator
   private int i;
   private int j;
   private String townPrefix;
-  private Stirng townSuffix;
+  private String townSuffix;
+  private String townName;
   public TownGeneration()
   {
     i = (int)(Math.random * 14) + 1;
@@ -87,7 +88,8 @@ public class TownGenerator
         break;
       default:
         townSuffix = "Town";
-        
     }
+    
+    townName = townPrefix + townSuffix;
   }
 }
