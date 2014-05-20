@@ -18,7 +18,6 @@ public class RouteGenerator
       Scanner move = new Scanner(System.in);
       direction = null;
       i = 1;
-  
   }
   public generate() {
     //determines the route length between 5 and 15
