@@ -2,6 +2,7 @@ package src.main.java.engine.creatures;
 
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * the superclass for all types of creatures
@@ -43,6 +44,30 @@ public abstract class AbstractCreature {
     //stores the DEF stat of this creature
     protected int DEFStat;
     public int getDEFStat() { return DEFStat; }
+    
+    public AbstractCreature(EnumTypes type, int tier) {
+        this.type  = type;
+        this.tier  = tier;
+        this.moves = pickMoves();
+        this.experience = getExpFromTier(tier);
+    }
+    
+    protected ArrayList<Moves> pickMoves() {
+        Random random = new Random;
+        ArrayList<Moves> t = new ArrayList<Moves>();
+        int n;
+        for(int i = 0; i < 4; i++) {
+            n = random.nextInt(MovesList.moves.size() + 1);
+            if(!(moves.get(n).getType() == this.type)) {
+                continue;
+            }
+            else {
+                t.add(moves.get(n));
+            }
+        }
+        return t;
+    }
+
 
     /**
      * calculate the creature's level from its experience
@@ -118,12 +143,6 @@ public abstract class AbstractCreature {
     //self-explanatory; use expGainedInBattle to get @param exp
     protected void addExp(int exp) {
         this.experience += exp;
-    }
-
-    public AbstractCreature(EnumTypes type, int tier) {
-        this.type = type;
-        this.tier = tier;
-        this.experience = getExpFromTier(tier);
     }
 
     /**
