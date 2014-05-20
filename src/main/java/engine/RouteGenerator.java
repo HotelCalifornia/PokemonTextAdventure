@@ -32,7 +32,7 @@ public class RouteGenerator
       //gives aditional info about route and instructions about how to navigate route
       System.out.println("you are on space " + i)
       System.out.println("Which direction would you like to go?");
-      System.out.println("Foward:F/Backward:B");
+      System.out.println("Foward:F");
       //accepts player input
       direction = move.nextLine();
       // progresses in player chosen direction
@@ -40,22 +40,13 @@ public class RouteGenerator
       {
         i++;
       }
-      else if (direction == 'b' || direction == 'B')
-      {
-        i--;
-      }
       //error catch
       else
       {
         System.out.println("Error: unrecognized direction")
       }
-      //puts player into next or previous town
-      if (i <= 0)
-      {
-        routeNum--;
-        //need town generation to complete
-      }
-      else if (i > 15)
+      //puts player into next town
+      else if (i > routeLength)
       {
         routeNum++;
         //need town generation to complete
