@@ -5,55 +5,89 @@ package src.main.java.engine;
 public class TownGenerator
 {
   private int i;
+  private int j;
   private String townPrefix;
   private Stirng townSuffix;
   public TownGeneration()
   {
     i = (int)(Math.random * 14) + 1;
+    i = (int)(Math.random * 7) + 1;
     switch(i)
     {
       case 1:
-        townPrefix = "Pallet ";
+        townPrefix = "Pallet";
         break;
       case 2:
-        townPrefix = "Mikado ";
+        townPrefix = "Mikado";
         break;
       case 3:
-        townPrefix = "Cobalt ";
+        townPrefix = "Cobalt";
         break;
       case 4:
-        townPrefix = "Denim ";
+        townPrefix = "Denim";
         break;
       case 6:
-        townPrefix = "Goldenrod ";
+        townPrefix = "Goldenrod";
         break;
       case 7:
-        townPrefix = "Firebrick ";
+        townPrefix = "Firebrick";
         break;
       case 8:
-        townPrefix = "Peach ";
+        townPrefix = "Peach";
         break;
       case 9:
-        townPrefix = "Turqoise ";
+        townPrefix = "Turqoise";
         break;
       case 10:
-        townPrefix = "Burlywood ";
+        townPrefix = "Burlywood";
         break;
       case 11:
-        townPrefix = "Sienna ";
+        townPrefix = "Sienna";
         break;
       case 12:
-        townPrefix = "Azure ";
+        townPrefix = "Azure";
         break;
       case 13:
-        townPrefix = "Ivory ";
+        townPrefix = "Ivory";
         break;
       case 14:
-        townPrefix = "Cornflower ";
+        townPrefix = "Cornflower";
         break;
       case 15:
-        townPrefix = "Starch ";
+        townPrefix = "Starch";
         break;
+      default:
+        townPrefix = "Crappy";
+    }
+    switch(j)
+    {
+      case(1):
+        townSuffix = " Town";
+        break;
+      case(2):
+        townSuffix = " City";
+        break;
+      case(3):
+        townSuffix = " Village";
+        break;
+      case(4):
+        townSuffix = "Burg";
+        break;
+      case(5):
+        townSuffix = " Municipality";
+        break;
+      case(6):
+        townSuffix = " Autonomous Collective";
+        break;
+      case(7):
+        townSuffix = " Whistle-top";
+        break;
+      case(8):
+        townSuffix = " Hamlet";
+        break;
+      default:
+        townSuffix = "Town";
+        
     }
   }
 }
