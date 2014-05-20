@@ -19,14 +19,15 @@ public class RouteGenerator
       direction = null;
       i = 1;
   }
-  public generate() {
-    //determines the route length between 5 and 15
-    routeLength= 5 + (int)(Math.random()*10);
-    //gives info about route to player upon entering route
-    system,out.println("Route " + routeNum);
-    system.out.println("The route is " + routeLength + " spaces long");
-    //handles player movement 
-    while(i <= routeLength)
+  public generate() 
+    {
+      //determines the route length between 5 and 15
+      routeLength= 5 + (int)(Math.random()*10);
+      //gives info about route to player upon entering route
+      system,out.println("Route " + routeNum);
+      system.out.println("The route is " + routeLength + " spaces long");
+      //handles player movement 
+      while(i <= routeLength)
     {
       //gives aditional info about route and instructions about how to navigate route
       System.out.println("you are on space " + i)
