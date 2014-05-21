@@ -7,7 +7,7 @@ import src.main.java.engine.creatures.Moves;
 import src.main.java.engine.creatures.EnumTypes;
 public class MovesList {
   private ArrayList<Moves> moves = new ArrayList<Moves>();
-  public static void makeMoves() {
+  private Moves makeMoves() {
     ArrayList<String> fireNames = new ArrayList<String>();
     fireNames.add(0, "Pyro");
     fireNames.add(1, "Nova");
@@ -109,7 +109,7 @@ public class MovesList {
       t = rand.nextInt(suffixes.size());
       String suf = suffixes.get(t);
       String name = pref + " " + suf;
-      Moves move = new Moves(name, (int)(20 + Math.random() * 81) , type);
+      return new Moves(name, (int)(20 + Math.random() * 81) , type);
     }
     
     
