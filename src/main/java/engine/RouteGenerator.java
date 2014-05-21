@@ -49,7 +49,7 @@ public class RouteGenerator
       else if (i > routeLength)
       {
         routeNum++;
-        //need town generation to complete
+        TownGenerator();
       }
     }
   }
