@@ -9,9 +9,9 @@ import java.util.Map;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 //TODO determine if we want to keep type-effectiveness a boolean value
 public enum EnumTypes {
-    FIRE(0, 0, 0, 0, 0, 0, 0),
-    WATER(0, 0, 0, 0, 0, 0, 0),
-    ELEC(0, 0, 0, 0, 0, 0, 0),
+    FIRE(-1, -1, 0, 1, 0, 0, 0),
+    WATER(1, -1, -1, -1, 0, 0, 0),
+    ELEC(0, 1, -1, 0, 0, 0, 0),
     GRASS(0, 0, 0, 0, 0, 0, 0),
     FLYING(0, 0, 0, 0, 0, 0, 0),
     PSYCHIC(0, 0, 0, 0, 0, 0, 0),
