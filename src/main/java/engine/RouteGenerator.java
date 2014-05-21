@@ -7,6 +7,7 @@ public class RouteGenerator
 {
   private int routeNum;
   private boolean pokemonAppear;
+  private double pkmnRand;
   private int routeLength;
   private char direction;
   private int i;
@@ -20,6 +21,7 @@ public class RouteGenerator
       move = new Scanner(System.in);
       direction = ' ';
       i = 1;
+      pkmnRand = 0.0;
   }
   public void generate()
     {
@@ -41,6 +43,11 @@ public class RouteGenerator
       if (direction == 'f' || direction == 'F')
       {
         i++;
+        pkmnRand = Math.random();
+        if (pkmnRand >= .8)
+        {
+          
+        }
       }
       else if (i > routeLength)
       {
