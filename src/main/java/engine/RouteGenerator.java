@@ -1,6 +1,6 @@
 
 package src.main.java.engine;
-//Creates route lengths
+//Creates route length
 import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class RouteGenerator
