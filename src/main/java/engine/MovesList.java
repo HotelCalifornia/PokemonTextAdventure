@@ -1,12 +1,13 @@
 package src.main.java.engine;
-import java.util.*;
 import java.util.Random;
 import java.util.ArrayList;
-import java.util.List;
 import src.main.java.engine.creatures.Moves;
 import src.main.java.engine.creatures.EnumTypes;
 public class MovesList {
-  private ArrayList<Moves> moves = new ArrayList<Moves>();
+  public static ArrayList<Moves> moves = new ArrayList<Moves>();
+  public MovesList() {
+      makeMoves();
+  }
   private Moves makeMoves() {
     ArrayList<String> fireNames = new ArrayList<String>();
     fireNames.add(0, "Pyro");

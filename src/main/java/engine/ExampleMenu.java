@@ -3,9 +3,6 @@ package src.main.java.engine;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
-/**
- * Created by 618616 on 5/9/2014.
- */
 public class ExampleMenu<E> extends AbstractMenu {
     public ExampleMenu(ArrayList<E> list) {
         super(list);

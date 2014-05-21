@@ -34,6 +34,7 @@ public abstract class AbstractCreature {
     //stores the creature's current HP. not to be confused with the HP stat
     protected int HP;
     public int getHP() { return HP; }
+    public void setHP(int HP) { this.HP = HP; }
 
     /* stats */
     //stores the HP stat of this creature

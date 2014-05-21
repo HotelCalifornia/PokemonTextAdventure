@@ -1,6 +1,7 @@
+package src.main.java.engine;
+
 //Creates route lengths
 import java.util.*;
-package src.main.java.engine;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class TownGenerator
 {
@@ -9,10 +10,10 @@ public class TownGenerator
   private String townPrefix;
   private String townSuffix;
   private String townName;
-  public TownGeneration()
+  public TownGenerator()
   {
-    i = (int)(Math.random * 14) + 1;
-    i = (int)(Math.random * 7) + 1;
+    i = (int)(Math.random() * 14) + 1;
+    i = (int)(Math.random() * 7) + 1;
     switch(i)
     {
       case 1:
@@ -37,7 +38,7 @@ public class TownGenerator
         townPrefix = "Peach";
         break;
       case 9:
-        townPrefix = "Turqoise";
+        townPrefix = "Turquoise";
         break;
       case 10:
         townPrefix = "Burlywood";
