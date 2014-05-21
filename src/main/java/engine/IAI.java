@@ -1,5 +1,6 @@
 package src.main.java.engine;
 
+import src.main.java.engine.creatures.AbstractCreature;
 import src.main.java.engine.creatures.EnumTypes;
 import src.main.java.engine.creatures.Moves;
 
@@ -22,9 +23,9 @@ public interface IAI {
      * uses the move selected by bestMove(), i.e.
      * apply damage and effects to the opponent
      * @param other the other creature in battle
-     * @param the move that will be used
+     * @param move the move that will be used
      */
-    void useMove(AbstractCreature other, Move move);
+    void useMove(AbstractCreature other, Moves move);
     
     /**
      * determines what happens when the creature retreats runs away or is switched out by a trainer),

@@ -1,5 +1,6 @@
 package src.main.java.engine.creatures;
 
+import src.main.java.engine.MovesList;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -53,7 +54,7 @@ public abstract class AbstractCreature {
     }
     
     protected ArrayList<Moves> pickMoves() {
-        Random random = new Random;
+        Random random = new Random();
         ArrayList<Moves> t = new ArrayList<Moves>();
         int n;
         for(int i = 0; i < 4; i++) {
@@ -122,10 +123,13 @@ public abstract class AbstractCreature {
      * @return the damage dealt
      */
     public int damageDealt(EnumTypes otherType, int otherDEFStat, int movePower) {
-        int effectiveMult = 1;
+        double effectiveMult = 1;
         //determine the multiplier for type effectiveness
         if(EnumTypes.isEffective(this.type, otherType) == 1) {
-            effectiveMult = 2;
+            effectiveMult = 2.0;
+        }
+        else if(EnumTypes.isEffective(this.type, otherType) == -1) {
+            effectiveMult = 0.5;
         }
         //calculate the chance for a critical hit (1/16)
         int critChance = 1 + (int)(Math.random() * 16);
