@@ -1,11 +1,31 @@
 package src.main.java.engine;
-
+import java.engine.creatures.*;
 /**
  * This class sets up all of the components required for running the game.
  */
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class Engine {
+    Scanner play;
     public Engine() {
-
+        Player player = new Player();
+        String input = play.nextLine();
+        if(input.compareTo("/help")==0)
+        {
+            System.out.println("Hello! Here are some commands:");
+            System.out.println("/quit: Quits the game");
+            System.out.println("/help: Displays a list of all the commands");
+            System.out.println("f: Move forward on a route or town");
+            System.out.println("/party: Displays info on your pokemon");
+            System.out.println("c: Go to Pokemon Center (only in town)");
+            System.out.println("m: Go to PokeMart (only in towns)");
+        }
+        if(input.compareTo("/quit")==0)
+        {
+            System.exit(0);
+        }
+        if(input.compareTo("/party")==0)
+        {
+            for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
+        }
     }
 }
