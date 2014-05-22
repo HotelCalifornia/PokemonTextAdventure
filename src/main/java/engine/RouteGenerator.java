@@ -28,7 +28,6 @@ public class RouteGenerator
       this.player = player;
   }
     public void goOn() {
-        routeNum++;
         generate();
     }
   public void generate()
@@ -49,10 +48,10 @@ public class RouteGenerator
       //handles player movement 
       while(i <= routeLength)
       {
-      //gives aditional info about route and instructions about how to navigate route
+      //gives additional info about route and instructions about how to navigate route
       System.out.println("you are on space " + i);
       System.out.println("Which direction would you like to go?");
-      System.out.println("Foward:F");
+      System.out.println("Forward:F");
       //accepts player input
       direction = move.nextLine();
       // progresses in player chosen direction
@@ -80,6 +79,8 @@ public class RouteGenerator
       //error catch
       else
       {
+          //for debug
+          System.out.println("you typed " + direction);
         System.out.println("Error: unrecognized direction");
       }
       if (i > routeLength)

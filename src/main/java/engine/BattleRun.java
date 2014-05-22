@@ -24,6 +24,8 @@ public class BattleRun{
           System.out.println("You sent out " + party[0].getName());
           System.out.println("Type anything to continue...");
           while (go) {
+              enemyTurn();
+              System.out.println("Enemy " + enemy.getName() + " has " + enemy.getHP() + " left!");
               String input = play.next();
               System.out.println("What do?");
               System.out.println("1. Moves");
@@ -53,7 +55,6 @@ public class BattleRun{
                       System.out.println("Couldn't get away!");
                   }
               }
-              enemyTurn();
           }
           route.generate();
       }
@@ -61,7 +62,7 @@ public class BattleRun{
     private void enemyTurn() {
         enemy.useMove(party[0], enemy.bestMove(enemy.getType(), party[0].getType()));
         System.out.println("Enemy " + enemy.getName() + " damaged " + party[0].getName() + "!");
-        System.out.println(party[0].getName() + " has " + party[0].getHP() + "!");
+        System.out.println(party[0].getName() + " has " + party[0].getHP() + "HP left!");
         if(party[0].getHP() <= 0) {
             for (AbstractCreature aParty : party) {
                 if (aParty != null) {
