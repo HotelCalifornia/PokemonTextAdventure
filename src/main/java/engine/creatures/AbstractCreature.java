@@ -73,7 +73,7 @@ public abstract class AbstractCreature {
      * for example:
      * experience = 900
      * int calculateLvl() {
-     *     int x = (5 * experience) / 4
+     *     int x = (5 * experience) / 4;
      *     return Math.pow(x, 1.0/3);
      * }
      * see @link http://bulbapedia.bulbagarden.net/wiki/Experience for more algorithms

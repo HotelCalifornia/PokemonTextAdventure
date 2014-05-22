@@ -17,7 +17,7 @@ public class WildCreature extends AbstractCreature implements IAI {
     @Override
     public int calculateEXP() {
         int x = (5 * experience) / 4;
-        Math.pow()
+        return Math.pow(x, 1.0/3);
     }
 
     @Override

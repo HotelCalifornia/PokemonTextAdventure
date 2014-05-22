@@ -1,6 +1,8 @@
 package src.main.java.engine;
 
 //Creates route lengths
+import src.main.java.engine.creatures.AbstractCreature;
+
 import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class TownGenerator
@@ -103,21 +105,21 @@ public class TownGenerator
     System.out.println("Pokecenter:C");
     System.out.println("Leave town/Enter next route: L")
     //town interface
-    while(loop == true)
+    while(loop)
     {
-      playerInput1 = input.nextLine().toChar()[0];
-      if (playerInput1 == 'C' || playerInput == 'c'):
+      playerInput1 = input.nextLine().toCharArray()[0];
+      if (playerInput1 == 'C' || playerInput1 == 'c'):
           System.out.println("Heal: H");
           System.out.println("Exit: E");
-          playerInput2 = input.nextLine().toChar()[0];
+          playerInput2 = input.nextLine().toCharArray()[0];
           switch(playerInput2)
           {
             case('H' || 'h'):
-              for(AbstractCreature c : player.getParty()) 
+              for(AbstractCreature c : player.getParty())
               {
                 if (c != null)
                 {
-                  c.setHP(c.getHPStat);
+                  c.setHP(c.getHPStat());
                 }
               }
               break;
