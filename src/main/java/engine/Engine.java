@@ -33,3 +33,12 @@ public class Engine
         }
     }
 }
+public void help()
+{
+    System.out.println("Hello! Here are some commands:");
+    System.out.println("/quit: Quits the game");
+    System.out.println("/help: Displays a list of all the commands");
+    System.out.println("F: Move forward on a route");
+    System.out.println("/party: Displays info on your pokemon");
+    System.out.println("C: Go to Pokemon Center (only in town)");
+}
