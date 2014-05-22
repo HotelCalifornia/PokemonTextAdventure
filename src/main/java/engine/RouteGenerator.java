@@ -68,7 +68,7 @@ public class RouteGenerator
       if (i > routeLength)
       {
           routeNum++;
-          TownGenerator();
+          TownGenerator town = new TownGenerator();
       }
       //puts player into next town
     }
