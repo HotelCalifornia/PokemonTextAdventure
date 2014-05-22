@@ -25,6 +25,14 @@ public class RouteGenerator
   }
   public void generate()
     {
+      ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
+      types.add(EnumTypes.FIRE);
+      types.add(EnumTypes.WATER);
+      types.add(EnumTypes.GRASS);
+      types.add(EnumTypes.ELEC);
+      types.add(EnumTypes.FLYING);
+      types.add(EnumTypes.PSYCHIC);
+      types.add(EnumTypes.GHOST);
       //determines the route length between 5 and 15
       routeLength= 5 + (int)(Math.random()*10);
       //gives info about route to player upon entering route
@@ -46,7 +54,8 @@ public class RouteGenerator
         pkmnRand = Math.random();
         if (pkmnRand >= .8)
         {
-          
+          t = rand.nextInt(types.size());
+          WildCreature(types.get(t), rand.nextInt()); 
         }
       }
       else if (i > routeLength)
