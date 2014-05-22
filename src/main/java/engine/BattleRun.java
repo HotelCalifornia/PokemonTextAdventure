@@ -10,6 +10,7 @@ public class BattleRun{
   RouteGenerator route;
   boolean go = true;
   public BattleRun(AbstractCreature enemy, RouteGenerator route, Player player) {
+      enemy.setHP(enemy.getHPStat());
       play = new Scanner(System.in);
       this.enemy = enemy;
       party = player.getParty();
@@ -25,7 +26,7 @@ public class BattleRun{
           System.out.println("Type anything to continue...");
           while (go) {
               enemyTurn();
-              System.out.println("Enemy " + enemy.getName() + " has " + enemy.getHP() + " left!");
+              System.out.println("Enemy " + enemy.getName() + " has " + enemy.getHP() + "HP left!");
               String input = play.next();
               System.out.println("What do?");
               System.out.println("1. Moves");

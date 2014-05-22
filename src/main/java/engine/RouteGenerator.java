@@ -28,6 +28,7 @@ public class RouteGenerator
       this.player = player;
   }
     public void goOn() {
+        i = 1;
         generate();
     }
   public void generate()
@@ -79,8 +80,6 @@ public class RouteGenerator
       //error catch
       else
       {
-          //for debug
-          System.out.println("you typed " + direction);
         System.out.println("Error: unrecognized direction");
       }
       if (i > routeLength)
