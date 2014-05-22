@@ -15,7 +15,7 @@ public class TownGenerator
   private String townSuffix;
   private String townName;
   Scanner input;
-  public TownGenerator(Player player)
+  public TownGenerator(Player player, RouteGenerator generator)
   {
     input = new Scanner(System.in);
     loop = true;
@@ -108,34 +108,40 @@ public class TownGenerator
     while(loop)
     {
       playerInput1 = input.nextLine();
+        boolean PC = false;
       if (playerInput1.equalsIgnoreCase("c"))
       {
-          System.out.println("Heal: H");
-          System.out.println("Exit: E");
-          playerInput2 = input.nextLine();
-          
-        if (playerInput2.equalsIgnoreCase("h"))
-        {
-          for(AbstractCreature c : player.getParty())
-          {
-            if (c != null)
-            {
-              c.setHP(c.getHPStat());
-            }
+          PC = true;
+          while(PC) {
+              System.out.println("Heal: H");
+              System.out.println("Exit: E");
+              playerInput2 = input.nextLine();
+
+              if (playerInput2.equalsIgnoreCase("h")) {
+                  for (AbstractCreature c : player.getParty()) {
+                      if (c != null) {
+                          c.setHP(c.getHPStat());
+                          System.out.println(c.getName() + " was healed.");
+                      }
+                  }
+              } else if (playerInput2.equalsIgnoreCase("e")) {
+                   PC = false;
+              }
           }
-        }
+          continue;
       }
       else if(playerInput1.equalsIgnoreCase("l"))
       {
-        RouteGenerator route = new RouteGenerator(player);
-        loop = false;
-      } 
+        generator.goOn();
+      }
+      else if(playerInput1.equalsIgnoreCase("/quit")) {
+          System.exit(0);
+      }
       //error catch
       else
       {
         System.out.println("Error: Unrecognized Command");
       }
     }
-    RouteGenerator route = new RouteGenerator(player);
   }
 }

@@ -1,8 +1,5 @@
 package src.main.java.engine.creatures;
 import src.main.java.engine.IAI;
-import src.main.java.engine.creatures.AbstractCreature;
-import src.main.java.engine.creatures.EnumTypes;
-import src.main.java.engine.creatures.Moves;
 
 public class WildCreature extends AbstractCreature implements IAI {
     public WildCreature(EnumTypes type, int experience, String name) {

@@ -22,6 +22,7 @@ public class BattleRun{
       }
       else {
           System.out.println("You sent out " + party[0].getName());
+          System.out.println("Type anything to continue...");
           while (go) {
               String input = play.next();
               System.out.println("What do?");
@@ -40,6 +41,9 @@ public class BattleRun{
                       player.addCreatureToPartyOrBox(enemy);
                       end(false);
                   }
+                  else {
+                      System.out.println("Darn! " + enemy.getName() + " broke free!");
+                  }
               } else if (input.equals("4") || input.equalsIgnoreCase("Run")) {
                   int getaway = 1 + (int) (Math.random() * 3);
                   if (getaway == 1 || getaway == 2) {
@@ -56,6 +60,8 @@ public class BattleRun{
     }
     private void enemyTurn() {
         enemy.useMove(party[0], enemy.bestMove(enemy.getType(), party[0].getType()));
+        System.out.println("Enemy " + enemy.getName() + " damaged " + party[0].getName() + "!");
+        System.out.println(party[0].getName() + " has " + party[0].getHP() + "!");
         if(party[0].getHP() <= 0) {
             for (AbstractCreature aParty : party) {
                 if (aParty != null) {

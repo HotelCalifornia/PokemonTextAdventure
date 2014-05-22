@@ -121,6 +121,6 @@ public class MovesList {
       t = rand.nextInt(suffixes.size());
       String suf = suffixes.get(t);
       String name = pref + " " + suf;
-      return new Moves(name, (int)(20 + Math.random() * 81) , type);
+      return new Moves(name, (int)(5 + Math.random() * 31) , type);
     }
   }

@@ -27,6 +27,10 @@ public class RouteGenerator
       pkmnRand = 0.0;
       this.player = player;
   }
+    public void goOn() {
+        routeNum++;
+        generate();
+    }
   public void generate()
   {
       ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
@@ -70,6 +74,9 @@ public class RouteGenerator
               }
           }
       }
+      else if(direction.equalsIgnoreCase("/quit")) {
+          System.exit(0);
+      }
       //error catch
       else
       {
@@ -78,7 +85,7 @@ public class RouteGenerator
       if (i > routeLength)
       {
         routeNum++;
-        TownGenerator town = new TownGenerator(player);
+        TownGenerator town = new TownGenerator(player, this);
       }
     }
   }
