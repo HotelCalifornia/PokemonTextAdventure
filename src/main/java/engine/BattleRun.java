@@ -1,13 +1,15 @@
 package src.main.java.engine;
 //Creates route length
 import java.util.*;
-import java.engine.creatures.*;
+import src.main.java.engine.creatures.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class BattleRun{
   Scanner play;
-  public BatlleRun(){
+    ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
+    private void fill
+  public BattleRun(){
       Player player = new Player();
-      String input = play.nextInt;
+      String input = Integer.toString(play.nextInt());
       WildCreature enemy = new WildCreature();
       AbstractCreature[] party = player.getParty();
       System.out.println("A wild pokemon approaches! " + enemy.getName() + " wants to battle!");
@@ -16,11 +18,11 @@ public class BattleRun{
       System.out.println("1.Moves");
       System.out.println("2.Pokemon");
       System.out.println("3.Run");
-      if(input.compareTo("1")==0||input.compareTo("Moves"))
+      if(input.equals("1")||input.equals("Moves"))
       {
+          int i = 0;
         for(Moves move : party[0].getMoves())
         {
-          int i = 0;
           System.out.println(i + move.getName());
           i++;
         }
