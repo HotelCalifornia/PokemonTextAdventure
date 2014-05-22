@@ -1,8 +1,6 @@
 package src.main.java.engine;
-
-//Creates route lengths
+//Creates towns
 import src.main.java.engine.creatures.AbstractCreature;
-
 import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class TownGenerator
@@ -10,7 +8,7 @@ public class TownGenerator
   private int i;
   private int j;
   boolean loop;
-    private Player player;
+  private Player player;
   private char playerInput1;
   private char playerInput2;
   private String townPrefix;
@@ -104,40 +102,42 @@ public class TownGenerator
     //town introduction
     System.out.println("Welcome to " + townName);
     System.out.println("Pokecenter:C");
-    System.out.println("Leave town/Enter next route: L")
+    System.out.println("Leave town/Enter next route: L");
     //town interface
     while(loop)
     {
       playerInput1 = input.nextLine().toCharArray()[0];
-      if (playerInput1 == 'C' || playerInput1 == 'c'):
+      if (playerInput1 == 'C' || playerInput1 == 'c')
+      {
           System.out.println("Heal: H");
           System.out.println("Exit: E");
           playerInput2 = input.nextLine().toCharArray()[0];
           switch(playerInput2)
+          
+        if (playerInput2 == 'H' || playerInput2 == 'h')
+        {
+          for(AbstractCreature c : player.getParty())
           {
-            case('H' || 'h'):
-              for(AbstractCreature c : player.getParty())
-              {
-                if (c != null)
-                {
-                  c.setHP(c.getHPStat());
-                }
-              }
-              break;
-            case('E'||'e')
-            break;
+            if (c != null)
+            {
+              c.setHP(c.getHPStat());
+            }
           }
+        }
+        else if (playerInput2 == 'E'|| playerInput2 == 'e')
+        {
+        }
+        else if(playerInput1 == 'L' || playerInput1 == 'l')
+        {
+          loop = false;
+        } 
+        //error catch
+        else
+        {
+          System.out.println("Error: Unrecognized Command");
+        }
+      } 
     }
-    else if(playerInput1 == 'L' || playerInput1 == 'l')
-    {
-      loop = false;
-    }
-      //error catch
-    else
-    {
-      System.out.println("Error: Unrecognized Command");
-    }
-  }
     RouteGenerator route = new RouteGenerator(player);
+  }
 }
-
