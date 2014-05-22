@@ -10,11 +10,12 @@ public class BattleRun{
   RouteGenerator route;
   boolean go = true;
   public BattleRun(AbstractCreature enemy, RouteGenerator route) {
+      play = new Scanner(System.in);
       this.enemy = enemy;
       Player player = new Player();
-      String input = play.next();
       party = player.getParty();
       while(go) {
+          String input = play.next();
           System.out.println("A wild pokemon approaches! " + enemy.getName() + " wants to battle!");
           System.out.println("You sent out " + party[0].getName());
           System.out.println("What do?");

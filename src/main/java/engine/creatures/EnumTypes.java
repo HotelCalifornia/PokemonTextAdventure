@@ -32,7 +32,7 @@ public enum EnumTypes {
     int ghost;
 
     EnumTypes(int fire, int water, int elec, int grass, int flying, int psychic, int ghost) {
-
+        initMaps();
     }
     static int isEffective(EnumTypes type1, EnumTypes type2) {
         /**

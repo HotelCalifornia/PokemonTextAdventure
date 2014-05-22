@@ -33,8 +33,8 @@ public class RandomNames
         suffix.add("Drake");
         suffix.add("Wave");
         Random ran = new Random();
-        int prefSpot = 1+(int)(Math.random() *prefix.size());
-        int sufSpot = 1+(int)(Math.random()*suffix.size());
+        int prefSpot = (int)(Math.random() *prefix.size());
+        int sufSpot = (int)(Math.random()*suffix.size());
         return prefix.get(prefSpot)+suffix.get(sufSpot);
     }
 }

@@ -50,6 +50,9 @@ public abstract class AbstractCreature implements IAI {
         this.type  = type;
         this.moves = pickMoves();
         this.name = name;
+        this.HPStat = type.getStatForType(type, "HP");
+        this.ATKStat = type.getStatForType(type, "ATK");
+        this.DEFStat = type.getStatForType(type, "DEF");
     }
     
     protected ArrayList<Moves> pickMoves() {
@@ -57,13 +60,14 @@ public abstract class AbstractCreature implements IAI {
         ArrayList<Moves> t = new ArrayList<Moves>();
         int n;
         for(int i = 0; i < 4; i++) {
-            n = random.nextInt(MovesList.moves.size() + 1);
-            if(!(MovesList.moves.get(n).getType() == this.type)) {
+            n = random.nextInt(MovesList.moves.size());
+            /*if(!(MovesList.moves.get(n).getType() == this.type)) {
                 continue;
             }
             else {
                 t.add(moves.get(n));
-            }
+            }*/
+            t.add(moves.get(n));
         }
         return t;
     }

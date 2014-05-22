@@ -31,6 +31,7 @@ public class Engine
         Random rand = new Random();
         int t = rand.nextInt(types.size());
         player.addCreatureToPartyOrBox(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
+        player.getParty()[0].setHP(player.getParty()[0].getHPStat());
         boolean intro = true;
         while(intro) {
             String input = play.nextLine();
@@ -48,7 +49,9 @@ public class Engine
             }
             if(input.equalsIgnoreCase("/party")) {
                 for (AbstractCreature creature : player.getParty()) {
-                    System.out.println(creature.getName() + " " + creature.getHP());
+                    if(creature != null) {
+                        System.out.println(creature.getName() + " " + creature.getHP());
+                    }
                 }
             }
             if(input.equalsIgnoreCase("/begin")) {
