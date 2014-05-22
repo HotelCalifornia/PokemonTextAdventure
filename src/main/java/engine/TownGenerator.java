@@ -126,8 +126,9 @@ public class TownGenerator
       //error catch
       else
       {
-        System.out.println("Error: Unrecognized Command")
+        System.out.println("Error: Unrecognized Command");
       }
     }
+    RouteGenerator routeGenerator = new RouteGenerator;
   }
 }
