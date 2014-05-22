@@ -58,15 +58,15 @@ public class RouteGenerator
           WildCreature(types.get(t), rand.nextInt()); 
         }
       }
-      else if (i > routeLength)
-      {
-          routeNum++;
-          //need town generation to complete
-      }
       //error catch
       else
       {
         System.out.println("Error: unrecognized direction");
+      }
+      if (i > routeLength)
+      {
+          routeNum++;
+          TownGenerator();
       }
       //puts player into next town
     }
