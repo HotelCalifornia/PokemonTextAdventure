@@ -112,7 +112,6 @@ public class TownGenerator
           System.out.println("Heal: H");
           System.out.println("Exit: E");
           playerInput2 = input.nextLine().toCharArray()[0];
-          switch(playerInput2)
           
         if (playerInput2 == 'H' || playerInput2 == 'h')
         {
@@ -126,17 +125,18 @@ public class TownGenerator
         }
         else if (playerInput2 == 'E'|| playerInput2 == 'e')
         {
+          //Do Nothing!!!!
         }
-        else if(playerInput1 == 'L' || playerInput1 == 'l')
-        {
-          loop = false;
-        } 
-        //error catch
-        else
-        {
-          System.out.println("Error: Unrecognized Command");
-        }
+      }
+      else if(playerInput1 == 'L' || playerInput1 == 'l')
+      {
+        loop = false;
       } 
+      //error catch
+      else
+      {
+        System.out.println("Error: Unrecognized Command");
+      }
     }
     RouteGenerator route = new RouteGenerator(player);
   }
