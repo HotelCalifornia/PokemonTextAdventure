@@ -8,7 +8,7 @@ import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class RouteGenerator
 {
-    private Player player;
+  private Player player;
   private int routeNum;
   private double pkmnRand;
   private int routeLength;
@@ -27,7 +27,7 @@ public class RouteGenerator
       this.player = player;
   }
   public void generate()
-    {
+  {
       ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
       types.add(EnumTypes.FIRE);
       types.add(EnumTypes.WATER);
@@ -43,7 +43,7 @@ public class RouteGenerator
       System.out.println("The route is " + routeLength + " spaces long");
       //handles player movement 
       while(i <= routeLength)
-    {
+      {
       //gives aditional info about route and instructions about how to navigate route
       System.out.println("you are on space " + i);
       System.out.println("Which direction would you like to go?");
@@ -57,7 +57,7 @@ public class RouteGenerator
         pkmnRand = Math.random();
         if (pkmnRand >= .8)
         {
-            Random rand = new Random();
+          Random rand = new Random();
           int t = rand.nextInt(types.size());
           BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
         }
@@ -69,10 +69,9 @@ public class RouteGenerator
       }
       if (i > routeLength)
       {
-          routeNum++;
-          TownGenerator town = new TownGenerator(player);
+        routeNum++;
+        TownGenerator town = new TownGenerator(player);
       }
-      //puts player into next town
     }
   }
 }
