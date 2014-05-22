@@ -15,6 +15,8 @@ import java.util.Random;
  */
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public abstract class AbstractCreature {
+    protected String name;
+    public String getName() { return name; }
     //the creature's type
     protected EnumTypes type;
     public EnumTypes getType() { return type; }
@@ -22,10 +24,6 @@ public abstract class AbstractCreature {
     //the creature's moves
     protected ArrayList<Moves> moves;
     public ArrayList<Moves> getMoves() { return moves; }
-
-    //stores the tier of this creature
-    protected int tier;
-    public int getTier() { return tier; }
 
     //stores the experience of this creature
     protected int experience;
@@ -47,11 +45,10 @@ public abstract class AbstractCreature {
     protected int DEFStat;
     public int getDEFStat() { return DEFStat; }
     
-    public AbstractCreature(EnumTypes type, int tier) {
+    public AbstractCreature(EnumTypes type, int level, String name) {
         this.type  = type;
-        this.tier  = tier;
         this.moves = pickMoves();
-        this.experience = getExpFromTier(tier);
+
     }
     
     protected ArrayList<Moves> pickMoves() {
@@ -83,6 +80,12 @@ public abstract class AbstractCreature {
      * @return the creature's level
      */
     public abstract int calculateLVL();
+
+    /**
+     * does the opposite of the calculateLVL method
+     * @return the exp
+     */
+    public abstract int calculateEXP();
 
     /**
      * calculate the experience gained from defeating a pokemon in battle
@@ -149,13 +152,4 @@ public abstract class AbstractCreature {
     protected void addExp(int exp) {
         this.experience += exp;
     }
-
-    /**
-     * get the current experience amount from the given tier.
-     * this can be implemented in a number of ways, depending on how in-depth
-     * we want to go with the tier/levelling system
-     * @param tier the tier of the creature
-     * @return the current experience of the creature
-     */
-    protected abstract int getExpFromTier(int tier);
 }

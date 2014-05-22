@@ -5,8 +5,8 @@ import src.main.java.engine.creatures.EnumTypes;
 import src.main.java.engine.creatures.Moves;
 
 public class WildCreature extends AbstractCreature implements IAI {
-    public WildCreature(EnumTypes type, int experience) {
-        super(type, experience);
+    public WildCreature(EnumTypes type, int experience, String name) {
+        super(type, experience, name);
     }
 
     @Override
@@ -15,8 +15,9 @@ public class WildCreature extends AbstractCreature implements IAI {
     }
 
     @Override
-    protected int getExpFromTier(int tier) {
-        return 0;
+    public int calculateEXP() {
+        int x = (5 * experience) / 4;
+        Math.pow()
     }
 
     @Override

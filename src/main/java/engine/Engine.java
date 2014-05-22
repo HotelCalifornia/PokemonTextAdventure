@@ -1,5 +1,8 @@
 package src.main.java.engine;
-import java.engine.creatures.*;
+
+import src.main.java.engine.creatures.*;
+import java.util.Scanner;
+
 /**
  * This class sets up all of the components required for running the game.
  */
@@ -19,11 +22,11 @@ public class Engine {
             System.out.println("c: Go to Pokemon Center (only in town)");
             System.out.println("m: Go to PokeMart (only in towns)");
         }
-        if(input.compareTo("/quit")==0)
+        if(input.equalsIgnoreCase("/quit"))
         {
             System.exit(0);
         }
-        if(input.compareTo("/party")==0)
+        if(input.equalsIgnoreCase("/party"))
         {
             for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
         }

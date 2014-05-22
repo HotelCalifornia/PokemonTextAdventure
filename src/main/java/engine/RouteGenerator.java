@@ -1,6 +1,8 @@
 
 package src.main.java.engine;
 //Creates route length
+import src.main.java.engine.creatures.EnumTypes;
+
 import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class RouteGenerator
@@ -53,8 +55,9 @@ public class RouteGenerator
         pkmnRand = Math.random();
         if (pkmnRand >= .8)
         {
+            Random rand = new Random();
           int t = rand.nextInt(types.size());
-          WildCreature(types.get(t), rand.nextInt()); 
+          WildCreature(types.get(t), rand.nextInt(), );
         }
       }
       //error catch
