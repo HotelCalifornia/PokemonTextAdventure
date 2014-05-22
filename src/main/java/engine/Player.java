@@ -30,9 +30,6 @@ public class Player {
                         box[j] = creature;
                         break;
                     }
-                    if(j == box.length - 1 && box[j] != null) {
-                        //what happens if the box is full? :o
-                    }
                 }
             }
         }

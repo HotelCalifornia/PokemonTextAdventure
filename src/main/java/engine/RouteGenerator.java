@@ -59,7 +59,7 @@ public class RouteGenerator
         {
             Random rand = new Random();
           int t = rand.nextInt(types.size());
-          BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
+          BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()), this);
         }
       }
       //error catch

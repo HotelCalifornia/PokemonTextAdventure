@@ -150,7 +150,7 @@ public abstract class AbstractCreature implements IAI {
     }
 
     //self-explanatory; use expGainedInBattle to get @param exp
-    protected void addExp(int exp) {
+    public void addExp(int exp) {
         this.experience += exp;
     }
 
