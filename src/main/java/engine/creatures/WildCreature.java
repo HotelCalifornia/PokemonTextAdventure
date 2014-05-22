@@ -17,7 +17,7 @@ public class WildCreature extends AbstractCreature implements IAI {
     @Override
     public int calculateEXP() {
         int x = (5 * experience) / 4;
-        return Math.pow(x, 1.0/3);
+        return (int)Math.pow(x, 1.0/3);
     }
 
     @Override
@@ -49,9 +49,6 @@ public class WildCreature extends AbstractCreature implements IAI {
     @Override
     public void useMove(AbstractCreature other, Moves move) {
         other.setHP(other.getHP() - damageDealt(other.getType(), other.getDEFStat(), move.getDamage()));
-        if(this.HP <= 0) {
-            //end the battle
-        }
     }
 
     @Override

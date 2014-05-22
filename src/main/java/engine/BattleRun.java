@@ -25,6 +25,18 @@ public class BattleRun{
             i++;
         }
         input = Integer.toString(play.nextInt());
+        if(input.equals("1") || input.equalsIgnoreCase(party[0].getMoves().get(0).getName())) {
+            party[0].useMove(enemy, party[0].getMoves().get(0));
+            if(enemy.getHP() <= 0) {
+                end();
+            }
+        }
+        else(input.equals("2") || input.equalsIgnoreCase(party[0].getMoves().get(1).getName())) {
+            party[0].useMove(enemy, party[0].getMoves().get(1));
+        }
       }
+    }
+    private void end() {
+
     }
   }

@@ -1,8 +1,9 @@
 package src.main.java;
-import src.main.java.engine.ExampleMenu;
-import java.util.ArrayList;
+import src.main.java.engine.Engine;
 
 public class Main 
 {
-  Engine intro = new Engine();
+    public static void main(String[] args) {
+        Engine intro = new Engine();
+    }
 }

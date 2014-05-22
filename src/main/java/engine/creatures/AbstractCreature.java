@@ -1,5 +1,6 @@
 package src.main.java.engine.creatures;
 
+import src.main.java.engine.IAI;
 import src.main.java.engine.MovesList;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import java.util.Random;
  * (list may be expanded or compacted)
  */
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
-public abstract class AbstractCreature {
+public abstract class AbstractCreature implements IAI {
     protected String name;
     public String getName() { return name; }
     //the creature's type
@@ -151,5 +152,10 @@ public abstract class AbstractCreature {
     //self-explanatory; use expGainedInBattle to get @param exp
     protected void addExp(int exp) {
         this.experience += exp;
+    }
+
+    @Override
+    public void useMove(AbstractCreature other, Moves move) {
+        other.setHP(other.getHP() - damageDealt(other.getType(), other.getDEFStat(), move.getDamage()));
     }
 }
