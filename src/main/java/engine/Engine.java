@@ -28,7 +28,7 @@ public class Engine {
         }
         if(input.equalsIgnoreCase("/party"))
         {
-            for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
+            for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getName() + " " + creature.getHP() + "HP"); }
         }
     }
 }
