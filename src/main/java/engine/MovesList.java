@@ -6,7 +6,9 @@ import src.main.java.engine.creatures.EnumTypes;
 public class MovesList {
   public static ArrayList<Moves> moves = new ArrayList<Moves>();
   public MovesList() {
-      makeMoves();
+      for(int i = 0; i <= 525; i++) {
+          moves.add(makeMoves());
+      }
   }
   private Moves makeMoves() {
     ArrayList<String> fireNames = new ArrayList<String>();

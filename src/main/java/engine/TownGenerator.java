@@ -17,6 +17,7 @@ public class TownGenerator
   Scanner input;
   public TownGenerator(Player player)
   {
+    input = new Scanner(System.in);
     loop = true;
     
     i = (int)(Math.random() * 14) + 1;

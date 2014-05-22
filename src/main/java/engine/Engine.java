@@ -17,9 +17,8 @@ public class Engine
     Scanner play;
     public Engine() 
     {
-        Player player = new Player();
-        
-        String input = play.nextLine();
+        play = new Scanner(System.in);
+        MovesList moves = new MovesList();
         ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
         types.add(EnumTypes.FIRE);
         types.add(EnumTypes.WATER);
@@ -28,30 +27,37 @@ public class Engine
         types.add(EnumTypes.FLYING);
         types.add(EnumTypes.PSYCHIC);
         types.add(EnumTypes.GHOST);
+        Player player = new Player();
         Random rand = new Random();
         int t = rand.nextInt(types.size());
         player.addCreatureToPartyOrBox(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
-        
-        
-        if(input.compareTo("/help")==0)
-        {
-            System.out.println("Hello! Here are some commands:");
-            System.out.println("/quit: Quits the game");
-            System.out.println("/help: Displays a list of all the commands");
-            System.out.println("F: Move forward on a route");
-            System.out.println("/party: Displays info on your pokemon");
-            System.out.println("C: Go to Pokemon Center (only in town)");
-        }
-        if(input.equalsIgnoreCase("/quit"))
-        {
-            System.exit(0);
-        }
-        if(input.equalsIgnoreCase("/party"))
-        {
-            for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
+        boolean intro = true;
+        while(intro) {
+            String input = play.nextLine();
+            System.out.println("Type '/help' for a list of commands, and '/begin' to begin your adventure!");
+            if(input.equalsIgnoreCase("/help")) {
+                System.out.println("Hello! Here are some commands:");
+                System.out.println("/quit: Quits the game");
+                System.out.println("/help: Displays a list of all the commands");
+                System.out.println("F: Move forward on a route");
+                System.out.println("/party: Displays info on your pokemon");
+                System.out.println("C: Go to Pokemon Center (only in town)");
+            }
+            if(input.equalsIgnoreCase("/quit")) {
+                System.exit(0);
+            }
+            if(input.equalsIgnoreCase("/party")) {
+                for (AbstractCreature creature : player.getParty()) {
+                    System.out.println(creature.getName() + " " + creature.getHP());
+                }
+            }
+            if(input.equalsIgnoreCase("/begin")) {
+                intro = false;
+            }
         }
         
         RouteGenerator route = new RouteGenerator(player);
+        route.generate();
     }
     public void help()
     {

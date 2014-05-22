@@ -49,7 +49,7 @@ public abstract class AbstractCreature implements IAI {
     public AbstractCreature(EnumTypes type, int level, String name) {
         this.type  = type;
         this.moves = pickMoves();
-
+        this.name = name;
     }
     
     protected ArrayList<Moves> pickMoves() {
@@ -58,7 +58,7 @@ public abstract class AbstractCreature implements IAI {
         int n;
         for(int i = 0; i < 4; i++) {
             n = random.nextInt(MovesList.moves.size() + 1);
-            if(!(moves.get(n).getType() == this.type)) {
+            if(!(MovesList.moves.get(n).getType() == this.type)) {
                 continue;
             }
             else {
