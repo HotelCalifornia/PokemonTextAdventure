@@ -113,22 +113,28 @@ public class TownGenerator
           switch(playerInput2)
           {
             case('H' || 'h'):
-              //add HP
+              for(AbstractCreature c : player.getParty()) 
+              {
+                if (c != null)
+                {
+                  c.setHP(c.getHPStat);
+                }
+              }
               break;
-            case('E'||'E')
+            case('E'||'e')
             break;
           }
-      }
-      else if(playerInput1 == 'L' || playerInput1 == 'l')
-      {
-        loop = false;
-      }
-      //error catch
-      else
-      {
-        System.out.println("Error: Unrecognized Command");
-      }
     }
-    RouteGenerator route = new RouteGenerator;
+    else if(playerInput1 == 'L' || playerInput1 == 'l')
+    {
+      loop = false;
+    }
+      //error catch
+    else
+    {
+      System.out.println("Error: Unrecognized Command");
+    }
   }
+    RouteGenerator route = new RouteGenerator;
 }
+
