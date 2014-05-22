@@ -1,6 +1,9 @@
 package src.main.java.engine;
 
 import src.main.java.engine.creatures.*;
+
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import src.main.java.engine.creatures.EnumTypes;
 import src.main.java.engine.creatures.WildCreature;
@@ -25,7 +28,8 @@ public class Engine
         types.add(EnumTypes.FLYING);
         types.add(EnumTypes.PSYCHIC);
         types.add(EnumTypes.GHOST);
-        
+        Random rand = new Random();
+        int t = rand.nextInt(types.size());
         player.addCreatureToPartyOrBox(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
         
         
@@ -47,15 +51,15 @@ public class Engine
             for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
         }
         
-        RouteGenerator route = new RouteGenerator();
+        RouteGenerator route = new RouteGenerator(player);
     }
-}
-public void help()
-{
-    System.out.println("Hello! Here are some commands:");
-    System.out.println("/quit: Quits the game");
-    System.out.println("/help: Displays a list of all the commands");
-    System.out.println("F: Move forward on a route");
-    System.out.println("/party: Displays info on your pokemon");
-    System.out.println("C: Go to Pokemon Center (only in town)");
+    public void help()
+    {
+        System.out.println("Hello! Here are some commands:");
+        System.out.println("/quit: Quits the game");
+        System.out.println("/help: Displays a list of all the commands");
+        System.out.println("F: Move forward on a route");
+        System.out.println("/party: Displays info on your pokemon");
+        System.out.println("C: Go to Pokemon Center (only in town)");
+    }
 }
