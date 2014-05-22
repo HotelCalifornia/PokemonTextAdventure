@@ -54,7 +54,7 @@ public class RouteGenerator
         pkmnRand = Math.random();
         if (pkmnRand >= .8)
         {
-          t = rand.nextInt(types.size());
+          int t = rand.nextInt(types.size());
           WildCreature(types.get(t), rand.nextInt()); 
         }
       }
