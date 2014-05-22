@@ -11,11 +11,11 @@ import java.util.Map;
 public enum EnumTypes {
     FIRE(-1, -1, 0, 1, 0, 0, 0),
     WATER(1, -1, -1, -1, 0, 0, 0),
-    ELEC(0, 1, -1, 0, 0, 0, 0),
-    GRASS(0, 0, 0, 0, 0, 0, 0),
-    FLYING(0, 0, 0, 0, 0, 0, 0),
-    PSYCHIC(0, 0, 0, 0, 0, 0, 0),
-    GHOST(0, 0, 0, 0, 0, 0, 0);
+    ELEC(0, 1, -1, -1, 1, 0, 0),
+    GRASS(-1, 1, 1, -1, -1, 0, 0),
+    FLYING(0, 1, -1, 1, -1, 0, 0),
+    PSYCHIC(0, 0, 0, 0, 0, -1, 1),
+    GHOST(0, 0, 0, 0, 0, 1, -1);
     Map<String, Integer> fireStats = new HashMap<String, Integer>();
     Map<String, Integer> waterStats = new HashMap<String, Integer>();
     Map<String, Integer> elecStats = new HashMap<String, Integer>();
