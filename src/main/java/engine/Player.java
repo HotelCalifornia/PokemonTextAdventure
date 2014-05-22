@@ -12,7 +12,9 @@ import src.main.java.engine.creatures.AbstractCreature;
 //this is the big one :0
 public class Player {
     private AbstractCreature[] party = new AbstractCreature[6 ];
+    public AbstractCreature[] getParty() { return party; }
     private AbstractCreature[] box   = new AbstractCreature[64];
+    public AbstractCreature[] getBox() { return box; }
     public Player() {
         //is this really it?
     }
