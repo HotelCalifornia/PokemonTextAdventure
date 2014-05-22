@@ -16,18 +16,6 @@ import java.util.ArrayList;
  * This method would allow us to only save multiple towns if there are multiple towns
  * within one route-length of the player
  */
-public class Main implements Runnable {
-	public static void main(String[] args) {
-        ArrayList<String> test = new ArrayList<String>();
-        test.add("Option");
-        test.add("Option");
-        test.add("Option");
-        ExampleMenu<String> example = new ExampleMenu<String>(test);
-        //example.displayMenu();
-	}
-
-    @Override
-    public void run() {
-
-    }
+public class Main 
+{
 }
