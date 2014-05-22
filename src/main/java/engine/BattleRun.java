@@ -9,44 +9,49 @@ public class BattleRun{
   AbstractCreature enemy;
   RouteGenerator route;
   boolean go = true;
-  public BattleRun(AbstractCreature enemy, RouteGenerator route) {
+  public BattleRun(AbstractCreature enemy, RouteGenerator route, Player player) {
       play = new Scanner(System.in);
       this.enemy = enemy;
-      Player player = new Player();
       party = player.getParty();
-      while(go) {
-          String input = play.next();
-          System.out.println("A wild pokemon approaches! " + enemy.getName() + " wants to battle!");
+      System.out.println("A wild pokemon approaches! " + enemy.getName() + " wants to battle!");
+      System.out.println("Do you want to fight? Type 'N' for no, and anything else for yes.");
+      String tInput = play.nextLine();
+      if(tInput.equalsIgnoreCase("N")) {
+          System.out.println("Ran away from the wild " + enemy.getName() + ".");
+          end(false);
+      }
+      else {
           System.out.println("You sent out " + party[0].getName());
-          System.out.println("What do?");
-          System.out.println("1. Moves");
-          System.out.println("2. Pokemon");
-          System.out.println("3. Catch");
-          System.out.println("4. Run");
-          if(input.equals("1") || input.equalsIgnoreCase("Moves")) {
-              moveListener();
-          }
-          else if(input.equals("2") || input.equalsIgnoreCase("Pokemon")) {
-              switchListener();
-          }
-          else if(input.equals("3") || input.equalsIgnoreCase("Catch")) {
-              int caught = 1 + (int) (Math.random() * 3);
-              if(caught == 1) {
-                  player.addCreatureToPartyOrBox(enemy);
-                  end();
+          while (go) {
+              String input = play.next();
+              System.out.println("What do?");
+              System.out.println("1. Moves");
+              System.out.println("2. Pokemon");
+              System.out.println("3. Catch");
+              System.out.println("4. Run");
+              if (input.equals("1") || input.equalsIgnoreCase("Moves")) {
+                  moveListener();
+              } else if (input.equals("2") || input.equalsIgnoreCase("Pokemon")) {
+                  switchListener();
+              } else if (input.equals("3") || input.equalsIgnoreCase("Catch")) {
+                  int caught = 1 + (int) (Math.random() * 3);
+                  if (caught == 1) {
+                      System.out.println("You caught " + enemy.getName() + "!");
+                      player.addCreatureToPartyOrBox(enemy);
+                      end(false);
+                  }
+              } else if (input.equals("4") || input.equalsIgnoreCase("Run")) {
+                  int getaway = 1 + (int) (Math.random() * 3);
+                  if (getaway == 1 || getaway == 2) {
+                      System.out.println("You got away safely!");
+                      end(false);
+                  } else {
+                      System.out.println("Couldn't get away!");
+                  }
               }
+              enemyTurn();
           }
-          else if(input.equals("4") || input.equalsIgnoreCase("Run")) {
-              int getaway = 1 + (int) (Math.random() * 3);
-              if(getaway == 1 || getaway == 2) {
-                  System.out.println("You got away safely!");
-                  end();
-              }
-              else {
-                  System.out.println("Couldn't get away!");
-              }
-          }
-          enemyTurn();
+          route.generate();
       }
     }
     private void enemyTurn() {
@@ -69,35 +74,36 @@ public class BattleRun{
         }
     }
     private void moveListener() {
+        System.out.println();
         int i = 1;
         for(Moves move : party[0].getMoves())
         {
-            System.out.println(i + " " + move.getName());
+            System.out.println(i + ". " + move.getName());
             i++;
         }
         String input = play.next();
         if(input.equals("1") || input.equalsIgnoreCase(party[0].getMoves().get(0).getName())) {
             party[0].useMove(enemy, party[0].getMoves().get(0));
             if(enemy.getHP() <= 0) {
-                end();
+                end(true);
             }
         }
         else if(input.equals("2") || input.equalsIgnoreCase(party[0].getMoves().get(1).getName())) {
             party[0].useMove(enemy, party[0].getMoves().get(1));
             if(enemy.getHP() <= 0) {
-                end();
+                end(true);
             }
         }
         else if(input.equals("3") || input.equalsIgnoreCase(party[0].getMoves().get(2).getName())) {
             party[0].useMove(enemy, party[0].getMoves().get(2));
             if(enemy.getHP() <= 0) {
-                end();
+                end(true);
             }
         }
         else if(input.equals("4") || input.equalsIgnoreCase(party[0].getMoves().get(3).getName())) {
             party[0].useMove(enemy, party[0].getMoves().get(3));
             if(enemy.getHP() <= 0) {
-                end();
+                end(true);
             }
         }
         else {
@@ -167,9 +173,12 @@ public class BattleRun{
         party[0] = party[index];
         party[index] = t;
     }
-    private void end() {
-        party[0].addExp(party[0].calculateEXP());
+    private void end(boolean defeat) {
+        if(defeat) {
+            System.out.println("You defeated " + enemy.getName() + "!");
+            System.out.println(party[0].getName() + " gained " + party[0].calculateEXP() + "EXP!");
+            party[0].addExp(party[0].calculateEXP());
+        }
         go = false;
-        route.generate();
     }
   }

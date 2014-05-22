@@ -67,7 +67,7 @@ public abstract class AbstractCreature implements IAI {
             else {
                 t.add(moves.get(n));
             }*/
-            t.add(moves.get(n));
+            t.add(MovesList.moves.get(n));
         }
         return t;
     }

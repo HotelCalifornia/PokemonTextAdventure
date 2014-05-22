@@ -33,9 +33,9 @@ public class Engine
         player.addCreatureToPartyOrBox(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
         player.getParty()[0].setHP(player.getParty()[0].getHPStat());
         boolean intro = true;
+        System.out.println("Type '/help' for a list of commands, and '/begin' to begin your adventure!");
         while(intro) {
             String input = play.nextLine();
-            System.out.println("Type '/help' for a list of commands, and '/begin' to begin your adventure!");
             if(input.equalsIgnoreCase("/help")) {
                 System.out.println("Hello! Here are some commands:");
                 System.out.println("/quit: Quits the game");

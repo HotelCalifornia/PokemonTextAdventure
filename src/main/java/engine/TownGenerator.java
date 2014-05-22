@@ -9,8 +9,8 @@ public class TownGenerator
   private int j;
   boolean loop;
   private Player player;
-  private char playerInput1;
-  private char playerInput2;
+  private String playerInput1;
+  private String playerInput2;
   private String townPrefix;
   private String townSuffix;
   private String townName;
@@ -107,14 +107,14 @@ public class TownGenerator
     //town interface
     while(loop)
     {
-      playerInput1 = input.nextLine().toCharArray()[0];
-      if (playerInput1 == 'C' || playerInput1 == 'c')
+      playerInput1 = input.nextLine();
+      if (playerInput1.equalsIgnoreCase("c"))
       {
           System.out.println("Heal: H");
           System.out.println("Exit: E");
-          playerInput2 = input.nextLine().toCharArray()[0];
+          playerInput2 = input.nextLine();
           
-        if (playerInput2 == 'H' || playerInput2 == 'h')
+        if (playerInput2.equalsIgnoreCase("h"))
         {
           for(AbstractCreature c : player.getParty())
           {
@@ -124,12 +124,8 @@ public class TownGenerator
             }
           }
         }
-        else if (playerInput2 == 'E'|| playerInput2 == 'e')
-        {
-          //Do Nothing!!!!
-        }
       }
-      else if(playerInput1 == 'L' || playerInput1 == 'l')
+      else if(playerInput1.equalsIgnoreCase("l"))
       {
         loop = false;
       } 

@@ -1,6 +1,7 @@
 
 package src.main.java.engine;
 //Creates route length
+import src.main.java.engine.creatures.AbstractCreature;
 import src.main.java.engine.creatures.EnumTypes;
 import src.main.java.engine.creatures.WildCreature;
 
@@ -12,7 +13,7 @@ public class RouteGenerator
   private int routeNum;
   private double pkmnRand;
   private int routeLength;
-  private char direction;
+  private String direction;
   private int i;
   Scanner move;
   public RouteGenerator(Player player)
@@ -21,7 +22,7 @@ public class RouteGenerator
       routeNum = 0;
       routeLength = 0;
       move = new Scanner(System.in);
-      direction = ' ';
+      direction = "";
       i = 1;
       pkmnRand = 0.0;
       this.player = player;
@@ -49,9 +50,9 @@ public class RouteGenerator
       System.out.println("Which direction would you like to go?");
       System.out.println("Foward:F");
       //accepts player input
-      direction = move.nextLine().toCharArray()[0];
+      direction = move.nextLine();
       // progresses in player chosen direction
-      if (direction == 'f' || direction == 'F')
+      if (direction.equalsIgnoreCase("f"))
       {
         i++;
         pkmnRand = Math.random();
@@ -59,8 +60,15 @@ public class RouteGenerator
         {
           Random rand = new Random();
           int t = rand.nextInt(types.size());
-          BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()), this);
+          BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()), this, player);
         }
+      }
+      else if(direction.equalsIgnoreCase("/party")) {
+          for (AbstractCreature creature : player.getParty()) {
+              if(creature != null) {
+                  System.out.println(creature.getName() + " " + creature.getHP());
+              }
+          }
       }
       //error catch
       else
