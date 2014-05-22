@@ -6,7 +6,6 @@ import java.util.*;
 public class RouteGenerator
 {
   private int routeNum;
-  private boolean pokemonAppear;
   private double pkmnRand;
   private int routeLength;
   private char direction;
