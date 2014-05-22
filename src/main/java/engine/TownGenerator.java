@@ -127,6 +127,7 @@ public class TownGenerator
       }
       else if(playerInput1.equalsIgnoreCase("l"))
       {
+        RouteGenerator route = new RouteGenerator(player);
         loop = false;
       } 
       //error catch

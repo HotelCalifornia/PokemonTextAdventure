@@ -114,7 +114,9 @@ public class BattleRun{
     private void switchListener() {
         int i = 1;
         for(AbstractCreature c : party) {
-            System.out.println(i + " " + c.getName());
+            if(c != null) {
+                System.out.println(i + " " + c.getName() + " " + c.getHP());
+            }
             i++;
         }
         String input = play.next();
