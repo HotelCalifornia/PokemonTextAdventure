@@ -47,7 +47,7 @@ public class Engine
             for(AbstractCreature creature : player.getParty()) { System.out.println(creature.getHP()); }
         }
         
-        RouteGenerator route = new RouteGenerator;
+        RouteGenerator route = new RouteGenerator();
     }
 }
 public void help()
