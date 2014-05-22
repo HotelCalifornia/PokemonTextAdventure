@@ -5,12 +5,9 @@ import src.main.java.engine.creatures.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class BattleRun{
   Scanner play;
-    ArrayList<EnumTypes> types = new ArrayList<EnumTypes>();
-    private void fill
-  public BattleRun(){
+  public BattleRun(AbstractCreature enemy){
       Player player = new Player();
       String input = Integer.toString(play.nextInt());
-      WildCreature enemy = new WildCreature();
       AbstractCreature[] party = player.getParty();
       System.out.println("A wild pokemon approaches! " + enemy.getName() + " wants to battle!");
       System.out.println("You sent out " + party[0].getName());

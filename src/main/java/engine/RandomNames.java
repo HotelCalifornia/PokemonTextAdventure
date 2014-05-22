@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class RandomNames
 {
 
-    public static String getName(ArrayList<String> prefix, ArrayList<String> suffix)
+    public static String getName()
     {
         ArrayList<String> prefix = new ArrayList<String>();
         prefix.add("Pyro");

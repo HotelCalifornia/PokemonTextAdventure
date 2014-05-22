@@ -2,6 +2,7 @@
 package src.main.java.engine;
 //Creates route length
 import src.main.java.engine.creatures.EnumTypes;
+import src.main.java.engine.creatures.WildCreature;
 
 import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
@@ -17,7 +18,6 @@ public class RouteGenerator
   {
       //defines variables
       routeNum = 0;
-      pokemonAppear = false;
       routeLength = 0;
       move = new Scanner(System.in);
       direction = ' ';
@@ -57,7 +57,7 @@ public class RouteGenerator
         {
             Random rand = new Random();
           int t = rand.nextInt(types.size());
-          WildCreature(types.get(t), rand.nextInt(), );
+          BattleRun battle = new BattleRun(new WildCreature(types.get(t), rand.nextInt(), RandomNames.getName()));
         }
       }
       //error catch
