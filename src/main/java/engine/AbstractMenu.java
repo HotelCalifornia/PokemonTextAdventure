@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * This class sets up the basic properties of a menu
  */
-public abstract class AbstractMenu<E> implements KeyListener {
+public abstract class AbstractMenu<E> {
 
     //stores the options available in this menu
     private List<E> options;
@@ -33,7 +33,7 @@ public abstract class AbstractMenu<E> implements KeyListener {
         }
     }
     
-    public abstract void selectOption(KeyEvent e);
+    public abstract void selectOption(String in);
 
 
 }

@@ -35,4 +35,15 @@ public class Player {
             }
         }
     }
+    public int avgLevel() {
+        int numInParty = 1;
+        int levelCount = 0;
+        for (AbstractCreature aParty : party) {
+            if (aParty != null) {
+                numInParty++;
+                levelCount += aParty.calculateLVL();
+            }
+        }
+        return levelCount/numInParty;
+    }
 }
