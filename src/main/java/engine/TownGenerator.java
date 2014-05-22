@@ -10,13 +10,14 @@ public class TownGenerator
   private int i;
   private int j;
   boolean loop;
+    private Player player;
   private char playerInput1;
   private char playerInput2;
   private String townPrefix;
   private String townSuffix;
   private String townName;
   Scanner input;
-  public TownGenerator()
+  public TownGenerator(Player player)
   {
     loop = true;
     
@@ -137,6 +138,6 @@ public class TownGenerator
       System.out.println("Error: Unrecognized Command");
     }
   }
-    RouteGenerator route = new RouteGenerator;
+    RouteGenerator route = new RouteGenerator(player);
 }
 

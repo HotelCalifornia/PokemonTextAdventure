@@ -8,13 +8,14 @@ import java.util.*;
 @SuppressWarnings("unused") //stops the warnings complaining that this class is unused
 public class RouteGenerator
 {
+    private Player player;
   private int routeNum;
   private double pkmnRand;
   private int routeLength;
   private char direction;
   private int i;
   Scanner move;
-  public RouteGenerator()
+  public RouteGenerator(Player player)
   {
       //defines variables
       routeNum = 0;
@@ -23,6 +24,7 @@ public class RouteGenerator
       direction = ' ';
       i = 1;
       pkmnRand = 0.0;
+      this.player = player;
   }
   public void generate()
     {
@@ -68,7 +70,7 @@ public class RouteGenerator
       if (i > routeLength)
       {
           routeNum++;
-          TownGenerator town = new TownGenerator();
+          TownGenerator town = new TownGenerator(player);
       }
       //puts player into next town
     }
