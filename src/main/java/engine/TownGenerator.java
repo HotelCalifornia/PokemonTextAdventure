@@ -7,13 +7,20 @@ public class TownGenerator
 {
   private int i;
   private int j;
+  boolean loop;
+  private char playerInput1;
+  private char playerInput2;
   private String townPrefix;
   private String townSuffix;
   private String townName;
+  Scanner input;
   public TownGenerator()
   {
+    loop = true;
+    
     i = (int)(Math.random() * 14) + 1;
     i = (int)(Math.random() * 7) + 1;
+    //creates town name
     switch(i)
     {
       case 1:
@@ -90,7 +97,37 @@ public class TownGenerator
       default:
         townSuffix = "Town";
     }
-    
     townName = townPrefix + townSuffix;
+    //town introduction
+    System.out.println("Welcome to " + townName);
+    System.out.println("Pokecenter:C");
+    System.out.println("Leave town/Enter next route: L")
+    //town interface
+    while(loop == true)
+    {
+      playerInput1 = input.nextLine().toChar()[0];
+      if (playerInput1 == 'C' || playerInput == 'c'):
+          System.out.println("Heal: H");
+          System.out.println("Exit: E");
+          playerInput2 = input.nextLine().toChar()[0];
+          switch(playerInput2)
+          {
+            case('H' || 'h'):
+              //add HP
+              break;
+            case('E'||'E')
+            break;
+          }
+      }
+      else if(playerInput1 == 'L' || playerInput1 == 'l')
+      {
+        loop = false;
+      }
+      //error catch
+      else
+      {
+        System.out.println("Error: Unrecognized Command")
+      }
+    }
   }
 }
